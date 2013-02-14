@@ -1,0 +1,141 @@
+HISTFILE=~/.local/share/zsh/histfile
+if  [[ ! -e $HISTFILE ]]; then
+        mkdir -p ~/.local/share/zsh
+        touch ~/.local/share/zsh/histfile
+fi
+HISTSIZE=5000
+SAVEHIST=10000
+
+# Use emacs keybindings even if our EDITOR is set to vi
+bindkey -e
+
+bindkey '\e[1~' beginning-of-line
+bindkey '\e[4~' end-of-line
+
+setopt append_history
+setopt inc_append_history
+setopt extended_history
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+setopt hist_ignore_space
+setopt hist_no_store
+setopt hist_no_functions
+setopt no_hist_beep
+setopt hist_save_no_dups
+setopt promptsubst
+
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' get-revision true
+zstyle ':vcs_info:*' stagedstr "+"
+zstyle ':vcs_info:*' unstagedstr "!"
+zstyle ':vcs_info:*' actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+zstyle ':vcs_info:*' formats       '%c%u%F{4}( %F{2}%b%f%F{4} ) %f%F{3}( %f%12.12i%F{3} )%f'
+
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+zstyle ':completion:*' special-dirs true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+autoload -U compinit promptinit
+autoload -U colors
+autoload -Uz vcs_info
+compinit
+promptinit
+
+
+autoload colors zsh/terminfo
+if [[ "$terminfo[colors]" -ge 8 ]]; then
+    colors
+fi
+for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+    eval PR_$color='{%$terminfo[bold]$fg[${(L)color}]%}'
+    eval PR_LIGHT_$color='{%$fg[${(L)color}]%}'
+    (( count = $count + 1 ))
+done
+PR_NO_COLOR="{%$terminfo[sgr0]%}"
+#prompt gentoo
+#prompt walters
+
+precmd() { vcs_info }
+
+local op="%{$fg[red]%}( %{$reset_color%}"
+local cp="%{$fg[red]%} )%{$reset_color%}"
+local path_p="${op}%{$fg[cyan]%}%~${cp}"
+local username="%{$fg[green]%}%n%{$reset_color%}"
+local host="@%{$fg[yellow]%}%m${reset_color%}"
+PROMPT="%{$fg[red]%}╭─${path_p}%{$fg[red]%} ─ ${op}${username}${host}${cp}
+%{$fg[red]%}╰─${op}%T${cp}%{$fg[blue]%}»%{$reset_color%} "
+
+#PS1='%F{red}[%F{yellow}%B» %F{cyan}%~%b%F{red}]%f%D{%n}[%T] %B%F{green}%n%F{white}@%F{yellow}%U%B%m%u%F{white}> '
+RPS1='${vcs_info_msg_0_}'
+
+#bindkey   beginning-of-line
+#bindkey   end-of-line
+#bindkey "^[[7~" beginning-of-line # Home
+#bindkey "^[[8~" end-of-line # End
+#bindkey "^[[3~" delete-char # Delete
+#bindkey ^R  history-incremental-search-backward
+#
+bindkey "^[[6~" end-of-history # Page up
+bindkey "^[[5~" insert-last-word # Page down
+
+export PATH=$PATH:$HOME/bin
+export UZBL_DOWNLOAD_DIR=$HOME/Downloads
+export GREP_OPTIONS='--color=auto'
+export LESS=-R
+export STATICU=rickard.dybeck
+
+##### ESTORE PLATFORMS #########################################################
+export MAGENTO_DIR='/var/www/magento'
+export PRESTASHOP_DIR='/var/www/prestashop/1441'
+
+alias ll='ls -lah --color=auto'
+alias ls='ls --color=auto'
+alias diff='colordiff'
+alias s='sublime'
+alias cs='phpcs --standard=PEAR'
+
+if [[ "$TERM" != emacs ]]; then
+[[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char
+[[ -z "$terminfo[khome]" ]] || bindkey -M emacs "$terminfo[khome]" beginning-of-line
+[[ -z "$terminfo[kend]" ]] || bindkey -M emacs "$terminfo[kend]" end-of-line
+[[ -z "$terminfo[kich1]" ]] || bindkey -M emacs "$terminfo[kich1]" overwrite-mode
+[[ -z "$terminfo[kdch1]" ]] || bindkey -M vicmd "$terminfo[kdch1]" vi-delete-char
+[[ -z "$terminfo[khome]" ]] || bindkey -M vicmd "$terminfo[khome]" vi-beginning-of-line
+[[ -z "$terminfo[kend]" ]] || bindkey -M vicmd "$terminfo[kend]" vi-end-of-line
+[[ -z "$terminfo[kich1]" ]] || bindkey -M vicmd "$terminfo[kich1]" overwrite-mode
+
+[[ -z "$terminfo[cuu1]" ]] || bindkey -M viins "$terminfo[cuu1]" vi-up-line-or-history
+[[ -z "$terminfo[cuf1]" ]] || bindkey -M viins "$terminfo[cuf1]" vi-forward-char
+[[ -z "$terminfo[kcuu1]" ]] || bindkey -M viins "$terminfo[kcuu1]" vi-up-line-or-history
+[[ -z "$terminfo[kcud1]" ]] || bindkey -M viins "$terminfo[kcud1]" vi-down-line-or-history
+[[ -z "$terminfo[kcuf1]" ]] || bindkey -M viins "$terminfo[kcuf1]" vi-forward-char
+[[ -z "$terminfo[kcub1]" ]] || bindkey -M viins "$terminfo[kcub1]" vi-backward-char
+
+# ncurses fogyatekos
+[[ "$terminfo[kcuu1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcuu1]/O/[}" vi-up-line-or-history
+[[ "$terminfo[kcud1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcud1]/O/[}" vi-down-line-or-history
+[[ "$terminfo[kcuf1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcuf1]/O/[}" vi-forward-char
+[[ "$terminfo[kcub1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcub1]/O/[}" vi-backward-char
+[[ "$terminfo[khome]" == "^[O"* ]] && bindkey -M viins "${terminfo[khome]/O/[}" beginning-of-line
+[[ "$terminfo[kend]" == "^[O"* ]] && bindkey -M viins "${terminfo[kend]/O/[}" end-of-line
+[[ "$terminfo[khome]" == "^[O"* ]] && bindkey -M emacs "${terminfo[khome]/O/[}" beginning-of-line
+[[ "$terminfo[kend]" == "^[O"* ]] && bindkey -M emacs "${terminfo[kend]/O/[}" end-of-line
+fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

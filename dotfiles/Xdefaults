@@ -1,0 +1,136 @@
+!URxvt.font:             xft:DejaVu Sans Mono:style=Book:size=8
+!URxvt.boldFont:         xft:DejaVu Sans Mono:style=bold:size=8
+urxvt*insecure:                false
+urxvt*termName:                rxvt-unicode
+urxvt*loginShell:            true
+urxvt*hold:                    false
+urxvt*saveLines:            2048
+urxvt*jumpScroll:            true
+urxvt*skipScroll:            true
+urxvt*scrollTtyOutput:        false
+urxvt*scrollWithBuffer:        false
+urxvt*scrollTtyKeypress:    true
+urxvt*mouseWheelScrollPage:    false
+urxvt*background:       #000000
+urxvt*foreground:       #FFFFFF
+urxvt*scrollBar:        false
+urxvt*matcher.button:   1
+urxvt*cursorBlink:      true
+urxvt*cursorColor:      #c1c8c9
+urxvt*colorBD:          #9a7b88
+
+urxvt.transparent:      false
+urxvt*allow_bold:       true
+
+Xft*dpi:                96
+Xft*antialias:          false
+Xft*hinting:            full
+
+URxvt*inheritPixmap:    false
+!URxvt*tintColor:       black
+!URxvt*shading:         80
+!URxvt*geometry:        80x17
+
+urxvt*font:                 xft:DejaVu Sans Mono:pixelsize=10
+urxvt*boldFont:             xft:DejaVu Sans Mono:pixelsize=12
+
+!------------------------------------------------------------------------------
+! c o l o r -  s e t t i n g s
+
+!!black*
+!color0:  #2B2B2B
+!*color8:  #0E190E
+!!red
+!urxvt*color1:               #d11c3c
+!urxvt*color9:               #f20d35
+!
+!!green
+!urxvt*color2:               #34D4CC
+!urxvt*color10:              #12B2B8
+!
+!!yellow
+!urxvt*color3:               #6BBF59
+!urxvt*color11:              #4D7E42
+!
+!!blue
+!urxvt*color4:               #4F8F60
+!urxvt*color12:              #228443
+!
+!!magenta
+!urxvt*color5:               #268745
+!urxvt*color13:              #216136
+!
+!!cyan
+!urxvt*color6:               #397157
+!urxvt*color14:              #1C6332
+!
+!!white
+!*color7:  #A2DBB4
+!*color15: #6AB07C
+
+!URxvt.background: #1e2021
+!URxvt.foreground: #888a8c
+
+!!Black
+!URxvt.color0:     #515151
+!URxvt.color8:     #707172
+!!Red
+!URxvt.color1:     #bf6382
+!URxvt.color9:     #eaaec2
+!!Green
+!URxvt.color2:     #65a446
+!URxvt.color10:    #aed49b
+!!Yellow
+!URxvt.color3:     #ad8a43
+!URxvt.color11:    #d4c3a0
+!!Blue
+!URxvt.color4:     #6b85c2
+!URxvt.color12:    #afc4e9
+!!Magenta
+!URxvt.color5:     #9e6bb8
+!URxvt.color13:    #d2b1e2
+!!Cyan
+!URxvt.color6:     #5c9d88
+!URxvt.color14:    #a4d0c1
+!!White
+!URxvt.color7:     #919191
+!URxvt.color15:    #d0d0d0
+
+!------------------------------------------------------------------------------
+! u r x v t
+URxvt*geometry:         120x24
+!URxvt*font             xft:montecarlo=10
+URxvt*font:             xft:tamsyn:size=10
+URxvt*urlLauncher:         iceweasel
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:        true
+URxvt*scrollColor:        #000000
+Xft*dpi : 96
+Xft*antialias: true
+Xft*hintstyle: hintfull
+Xft*rgba: rgb
+URxvt*border: 0
+
+!urxvt fonts:
+URxvt*font:-*-lime-medium-*-*-*-10-*-*-*-*-*-*-*
+URxvt*boldFont:-*-lime-bold-*-*-*-10-*-*-*-*-*-*-*
+
+urxvt*tripleclickwords:        true
+urxvt*cutchars:                `'",;@&*=|?()<>[]{}
+urxvt*pastableTabs:            false
+urxvt*mapAlert:                false
+urxvt*urgentOnBell:            false
+urxvt*visualBell:            false
+urxvt*utmpInhibit:            false
+
+!! Perl Extensions !!
+!! Available extensions: default, automove-background, block-graphics-to-ascii,
+!! digital-clock, example-refresh-hooks, kuake, macosx-clipboard, matcher,
+!! option-popup, readline, remote-clipboard, searchable-scrollback, selection,
+!! selection-autotransform, selection-pastebin, selection-popup, tabbed,
+!! urxvt-popup, xim-onthespot
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: google-chrome
+URxvt.matcher.button: 2
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+URxvt.keysym.C-o: perl:matcher
