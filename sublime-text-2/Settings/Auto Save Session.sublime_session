@@ -1,0 +1,1783 @@
+{
+	"folder_history":
+	[
+		"/home/dybeck/git/Gittern",
+		"/home/dybeck/git/node-xmlrpc",
+		"/home/dybeck/projects/modules/zencart",
+		"/home/dybeck/projects/other/tuna",
+		"/home/dybeck/projects/libraries/asp-checkout",
+		"/home/dybeck/projects/libraries/java-checkout/examples/src/examples",
+		"/opt/klarna-docs/code/asp-checkout/Klarna.Asp.Examples",
+		"/home/dybeck/projects/libraries/dotnet-checkout",
+		"/var/www/magento",
+		"/var/www/mockups",
+		"/home/dybeck/projects/other/web-integration",
+		"/home/dybeck/projects/other/web-integration/build",
+		"/var/www/apis/oscommerce/v2.3.1/dev_478de2b5",
+		"/var/www/apis/git/oxid_testdata",
+		"/var/www/apis/git/oscommerce_testdata",
+		"/var/www/apis/git/magento_testdata",
+		"/var/www/mockup",
+		"/home/dybeck/Downloads/dotnet-checkout",
+		"/var/www/opencart",
+		"/home/dybeck/projects/modules/oscommerce",
+		"/home/dybeck/projects/modules/opencart",
+		"/home/dybeck/projects/libraries/python-checkout",
+		"/home/dybeck/projects/libraries/java-checkout",
+		"/home/dybeck/projects/modules/prestashop",
+		"/home/dybeck/projects/modules/magento",
+		"/home/dybeck/projects/modules/magento_co2",
+		"/home/dybeck/projects/libraries/php-checkout",
+		"/var/www/msbo",
+		"/home/dybeck/projects/other/msbo",
+		"/home/dybeck/projects/other/apis-api",
+		"/home/dybeck/projects/other/aj",
+		"/home/dybeck/projects/modules/oxid",
+		"/home/dybeck/projects/other/minimal_klarna",
+		"/home/dybeck/projects/other/mstools",
+		"/home/dybeck/projects/libraries/java-api",
+		"/var/www/apis/magento_testdata/files/create",
+		"/home/dybeck/projects/other/CIA",
+		"/home/dybeck/projects/other/CIA/src",
+		"/home/dybeck/projects/libraries/asp-api",
+		"/home/dybeck/projects/libraries/python-api",
+		"/home/dybeck/projects/other/private/klarna_gem",
+		"/home/dybeck/projects/libraries/dotnet-api-ng",
+		"/home/dybeck/projects/libraries/dotnet-api-ng/Source",
+		"/home/dybeck/projects/libraries/java3/test",
+		"/home/dybeck/projects/libraries/java3/src",
+		"/home/dybeck/projects/libraries/java3",
+		"/var/www/php-api",
+		"/home/dybeck/projects/oscommerce"
+	],
+	"last_window_id": 54,
+	"settings":
+	{
+		"new_window_height": 1614.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"incl",
+						"includes"
+					],
+					[
+						"_",
+						"_include"
+					],
+					[
+						"ha",
+						"handle"
+					],
+					[
+						"au",
+						"author"
+					],
+					[
+						"confi",
+						"_config"
+					],
+					[
+						"var",
+						"var_dump"
+					],
+					[
+						"_wr",
+						"_write"
+					],
+					[
+						"_writed",
+						"_writeDate"
+					],
+					[
+						"html",
+						"htmlentities"
+					],
+					[
+						"dir",
+						"directory"
+					],
+					[
+						"ch",
+						"chdir"
+					],
+					[
+						"auth",
+						"authors"
+					],
+					[
+						"loc",
+						"location"
+					],
+					[
+						"paym",
+						"paymentMethod"
+					],
+					[
+						"pay",
+						"paymentMethod"
+					],
+					[
+						"KLARNA",
+						"KLARNA_DIR"
+					],
+					[
+						"invoice_",
+						"invoice_tax"
+					],
+					[
+						"shi",
+						"shipping_discount_amount"
+					],
+					[
+						"req",
+						"req1	require_once …"
+					],
+					[
+						"shipp",
+						"shipping_fee"
+					],
+					[
+						"invo",
+						"invoice_tax"
+					],
+					[
+						"inv",
+						"invoice_tax"
+					],
+					[
+						"cou",
+						"country"
+					],
+					[
+						"extras",
+						"_extras"
+					],
+					[
+						"ex",
+						"extras"
+					],
+					[
+						"ga",
+						"gateway_extras"
+					],
+					[
+						"extra",
+						"extraFees"
+					],
+					[
+						"klarna",
+						"klarnaPaymentModule"
+					],
+					[
+						"klar",
+						"klarna_specpayment"
+					],
+					[
+						"kla",
+						"klarna_partpayment"
+					],
+					[
+						"kre",
+						"kreditor_partpayment"
+					],
+					[
+						"loca",
+						"location"
+					],
+					[
+						"getId",
+						"getIdSuffix"
+					],
+					[
+						"shar",
+						"sharedSecret"
+					],
+					[
+						"KiTT",
+						"KiTT_Locale"
+					],
+					[
+						"lo",
+						"logic"
+					],
+					[
+						"fun",
+						"function"
+					],
+					[
+						"getCountr",
+						"getCountryId"
+					],
+					[
+						"isCo",
+						"isCompanyAllowed"
+					],
+					[
+						"getCou",
+						"getCountryId"
+					],
+					[
+						"Kitt",
+						"KiTT_CountryLogic"
+					],
+					[
+						"getCompa",
+						"getCompanyName"
+					],
+					[
+						"addre",
+						"addressHelper"
+					],
+					[
+						"add",
+						"addressHelper"
+					],
+					[
+						"isCom",
+						"isCompany"
+					],
+					[
+						"KiTT_",
+						"KiTT_CountryLogic"
+					],
+					[
+						"array_key",
+						"array_key_exists"
+					],
+					[
+						"klarn",
+						"klarnaAddr"
+					]
+				]
+			},
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 162.0,
+				"selected_items":
+				[
+					[
+						"install",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 603.0
+			},
+			"console":
+			{
+				"height": 0.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/dybeck/projects/modules/magento/RELEASENOTES",
+				"/home/dybeck/projects/modules/magento/app/design/adminhtml/default/default/template/klarna/info.phtml",
+				"/home/dybeck/projects/modules/magento/git_hooks/pre-commit/check-php",
+				"/home/dybeck/projects/modules/magento/packager.php",
+				"/var/apis/build.xml",
+				"/home/dybeck/projects/modules/magento/build/package.xml",
+				"/home/dybeck/projects/modules/magento/kitt/misc/ant/build.xml",
+				"/home/dybeck/projects/modules/magento/build.properties",
+				"/home/dybeck/projects/modules/magento/ant/base.xml",
+				"/home/dybeck/projects/modules/magento/build.xml",
+				"/home/dybeck/projects/modules/magento/Rakefile",
+				"/home/dybeck/projects/modules/magento/php-api/build.xml",
+				"/home/dybeck/projects/other/static/Makefile",
+				"/home/dybeck/projects/modules/magento/packager.sh",
+				"/home/dybeck/Documents/package.xml",
+				"/var/www/magento/app/code/core/Mage/XmlConnect/Controller/Action.php",
+				"/var/www/magento/app/code/core/Mage/XmlConnect/Helper/Android.php",
+				"/var/www/magento/app/code/core/Mage/Connect/Helper/Data.php",
+				"/var/www/magento/app/code/core/Mage/Connect/Model/Extension.php",
+				"/var/www/magento/lib/Mage/Connect/Package.php",
+				"/var/www/magento/lib/Mage/Connect/Package/Writer.php",
+				"/home/dybeck/projects/modules/magento/dirtool.rb",
+				"/home/dybeck/projects/modules/magento/test.xml",
+				"/home/dybeck/projects/modules/magento/test5.xml/package.xml",
+				"/home/dybeck/projects/dirtool.rb",
+				"/var/www/magento/app/code/core/Mage/Connect/Block/Adminhtml/Extension/Custom/Edit/Tab/Package.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Pclass.php",
+				"/home/dybeck/projects/libraries/php-api/CHANGELOG",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Gateway/Abstract.php",
+				"/home/dybeck/projects/modules/magento/phpunit/Helper/Checkout/TestOnestep.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Payment.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Quote.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Helper.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Block/Product/Price.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Model/Observer.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Api.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Data.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Checkout/Onestep.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Block/Klarna/Shared.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/XmlRpc.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/stubs.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/App.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Session.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Mage.php",
+				"/var/www/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Data.php",
+				"/var/www/apis/git/xtcommerce/_PERMISSIONS",
+				"/var/www/apis/git/oxid/_PERMISSIONS",
+				"/var/www/apis/oxid/v4.5.5/dev_23259341/_PERMISSIONS",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Model/Klarna/Shared.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/libs/kitt/classes/Module/Checkout/Controller.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Address.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/MageCoreModelStore.php",
+				"/home/dybeck/projects/modules/magento/kitt/classes/Payment/Option.php",
+				"/home/dybeck/projects/modules/magento/kitt/classes/Checkout/Controller.php",
+				"/home/dybeck/projects/modules/magento/kitt/classes/KiTT.php",
+				"/var/www/magento/app/code/core/Mage/Core/Block/Template.php",
+				"/var/www/magento/app/code/core/Mage/Catalog/Block/Product/Price.php",
+				"/var/www/magento/app/code/core/Mage/Bundle/Block/Catalog/Product/Price.php",
+				"/var/www/magento/app/code/core/Mage/Catalog/Block/Product/Abstract.php",
+				"/home/dybeck/projects/modules/magento/.git/config",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Model/Klarna/Invoice.php",
+				"/var/www/magento/app/code/core/Mage/Sales/Model/Abstract.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Gateway/Extras.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Checkout.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/MagentoPClassStorage.php",
+				"/home/dybeck/projects/modules/magento/phpunit/Helper/TestPclass.php",
+				"/home/dybeck/projects/modules/magento/phpunit/Helper/Gateway/TestExtras.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/TaxCalculation.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Model.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Order.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Product.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/MageHelperAbstract.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Customer.php",
+				"/usr/share/php/PHPUnit/Framework/MockObject/Stub.php",
+				"/usr/share/php/PHPUnit/Framework/TestCase.php",
+				"/usr/share/php/PHPUnit/Framework/MockObject/MockObject.php",
+				"/home/dybeck/projects/modules/magento/phpunit/Controller/Gateway/TestExtras.php",
+				"/var/www/magento/app/code/core/Mage/Sales/Model/Order.php",
+				"/home/dybeck/projects/modules/magento/kitt/classes/Addresses.php",
+				"/home/dybeck/projects/modules/magento/kitt/classes/CountryLogic.php",
+				"/var/www/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Gateway/Abstract.php",
+				"/var/www/magento/app/code/community/Klarna/KlarnaPaymentModule/Block/Klarna/Shared.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/controllers/AddressController.php",
+				"/var/www/magento/app/code/core/Mage/Core/Controller/Front/Router.php",
+				"/home/dybeck/projects/modules/magento/kitt/classes/API.php",
+				"/var/www/magento/app/code/community/Klarna/KlarnaPaymentModule/libs/kitt/classes/Payment/Option.php",
+				"/var/www/magento/app/code/community/Klarna/KlarnaPaymentModule/libs/kitt/classes/API.php",
+				"/var/www/magento/app/code/core/Mage/Core/Controller/Request/Http.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/AdditionalInfo.php",
+				"/var/www/apis/git/xtcommerce/conf/config.php",
+				"/var/www/apis/git/xtcommerce/_INSTALL.sql",
+				"/var/www/apis/git/xtcommerce_testdata/_INSTALL_TESTDATA.sql",
+				"/home/dybeck/projects/modules/magento/CHANGELOG",
+				"/home/dybeck/projects/modules/magento/app/design/frontend/base/default/template/klarna/checkout/osc-klarna-ssn.phtml",
+				"/home/dybeck/projects/libraries/python-api/examples/reserve_amount.py",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Sanitize.php",
+				"/home/dybeck/projects/modules/magento/php-api/examples/reserveAmount.php",
+				"/var/www/magento/app/code/core/Mage/Paypal/etc/system.xml",
+				"/var/www/magento/app/code/core/Mage/Paypal/etc/config.xml",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/etc/system.xml",
+				"/home/dybeck/bin/ms-review",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/etc/config.xml",
+				"/home/dybeck/projects/modules/magento/kitt/build.xml",
+				"/var/www/magento/app/code/community/Klarna/KlarnaPaymentModule/Model/Klarna/Shared.php",
+				"/home/dybeck/projects/other/minimal_klarna/Examples/reserve_amount_example.rb",
+				"/home/dybeck/.rvm/gems/ruby-1.9.3-p194/gems/klarna_gem-0.0.1/lib/klarna_gem/abstract_call.rb",
+				"/home/dybeck/.rvm/gems/ruby-1.9.3-p194/gems/klarna_gem-0.0.1/lib/klarna_gem/Calls/reserve_amount.rb",
+				"/home/dybeck/.rvm/gems/ruby-1.9.3-p194/gems/klarna_gem-0.0.1/lib/klarna_gem/abstract_api.rb",
+				"/var/www/magento/index.php",
+				"/home/dybeck/projects/modules/veyton/Rebranding_README.txt",
+				"/home/dybeck/.config/sublime-text-2/Packages/User/Preferences.sublime-settings"
+			],
+			"find":
+			{
+				"height": 36.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+					"<project>",
+					"/home/dybeck/projects/modules/magento/app/code/community/Klarna",
+					"/home/dybeck/projects/modules/magento/app/code",
+					"<project>",
+					"/home/dybeck/projects/modules/magento/app/code/community",
+					"/home/dybeck/projects/modules/magento/app/code",
+					"/home/dybeck/projects/modules/magento",
+					"/home/dybeck/projects/modules/magento/app/code/community",
+					"<project>/app/",
+					"<project>",
+					"/home/dybeck/projects/modules/magento/",
+					"/home/dybeck/projects/modules/magento/app",
+					"<project>",
+					"/home/dybeck/projects/modules/magento/app/code/community/Klarna",
+					"<project>",
+					"/home/dybeck/projects/modules/magento/app/code/community/Klarna"
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"span id=",
+					"span id=\"klarna_logo\"",
+					"build-module",
+					"stage-module",
+					"xmlrpc",
+					"wrappers.inc",
+					"recurse",
+					"public",
+					"directoryHash",
+					"array",
+					"type",
+					"write",
+					"puts",
+					"arg",
+					"to_hash",
+					"worker",
+					"Worker",
+					"Ma",
+					"Worker",
+					">{\"",
+					"{}, ",
+					"echo \"",
+					"getPa",
+					"getPaymentCode",
+					"fetchPclasses",
+					"setTemplate",
+					"paymentMethod",
+					"storeCode",
+					"country",
+					"getData",
+					"getLogo",
+					" [type]",
+					"terms",
+					"dirname(dirname(dirname(dirname(__FILE__))))",
+					"locale",
+					"locales",
+					"country",
+					"locale",
+					"this->_country",
+					"getAllP",
+					"getPClasses",
+					"fetchPClasses",
+					"box",
+					"agb_link",
+					"getTerms",
+					"quote",
+					"$code",
+					"code",
+					"$method",
+					"info",
+					"labels",
+					"return array();",
+					"$data",
+					"\n        return $data;",
+					"$data",
+					"\n        $data = array();",
+					"$data",
+					"methodCode",
+					"method",
+					"error",
+					"method",
+					"translator",
+					"error",
+					"$fields",
+					"fields",
+					"error",
+					"fields",
+					"error",
+					"fields",
+					"locale",
+					"getCountrySpecificFields",
+					"getMethod",
+					"flog",
+					"isAvailable",
+					"isBelowLimit",
+					"-  ",
+					"-",
+					"\n-",
+					"* @license   http://opensource.org/licenses/BSD-2-Clause BSD-2",
+					"TaxCalculation",
+					"Payment",
+					"reward currency",
+					"reward_currency",
+					"custorme balance",
+					"gift card",
+					"shipping_fee",
+					"gw_item_price",
+					"gw_price",
+					"invoice_tax",
+					"mock",
+					"getModel",
+					"KLARNA_DIR",
+					"KiTT::configure",
+					"configure",
+					"discount",
+					"getDiscount",
+					"getFee",
+					"_addShippingFee",
+					"$this->_",
+					"splitStreet",
+					"gateway_extras",
+					"_getTa",
+					"_getTaxRate",
+					"getTaxRate",
+					"gateway",
+					"Mage::helper",
+					"order",
+					"($order)",
+					"*\n     * @param object $order Magento order object\n     ",
+					"($order)",
+					"order",
+					"objcet",
+					"this->order",
+					"_addGwItemPrice",
+					"getGwItemsPrice",
+					"_addGwPrice",
+					"->_",
+					"order",
+					"_getTaxRate",
+					"updateGoodsList",
+					"getTaxRate",
+					"this->order",
+					"->_",
+					"this->order",
+					"this",
+					"helper",
+					"_addExtras",
+					"isOSCEnabled"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"{},\n>{\n\"",
+					"{},\n",
+					"KiTT::countryLogic(KiTT::locale($1));"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 36.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					],
+					[
+						0,
+						1,
+						1,
+						2
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					0.5,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 86.0
+			},
+			"replace":
+			{
+				"height": 68.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+					[
+						"observer",
+						"app/code/community/Klarna/KlarnaPaymentModule/Model/Observer.php"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 500.0,
+				"selected_items":
+				[
+					[
+						"python",
+						"/home/dybeck/Documents/sublime/python-api.sublime-project"
+					],
+					[
+						"ze",
+						"/home/dybeck/Documents/sublime/zencart.sublime-project"
+					],
+					[
+						"oscommerce",
+						"/home/dybeck/Documents/sublime/oscommerce.sublime-project"
+					],
+					[
+						"static",
+						"/home/dybeck/Documents/sublime/static.sublime-project"
+					],
+					[
+						"oxi",
+						"/home/dybeck/Documents/sublime/oxid.sublime-project"
+					],
+					[
+						"ox",
+						"/home/dybeck/Documents/sublime/oxid.sublime-project"
+					],
+					[
+						"asp",
+						"/home/dybeck/Documents/sublime/asp-api.sublime-project"
+					],
+					[
+						"py",
+						"/home/dybeck/Documents/sublime/python-api.sublime-project"
+					],
+					[
+						"",
+						"/home/dybeck/Documents/sublime/opencart.sublime-project"
+					],
+					[
+						"java",
+						"/home/dybeck/Documents/sublime/java.sublime-project"
+					],
+					[
+						"check",
+						"/home/dybeck/Documents/sublime/php-checkout.sublime-project"
+					],
+					[
+						"php-chec",
+						"/home/dybeck/Documents/sublime/php-checkout.sublime-project"
+					],
+					[
+						"php-api",
+						"/home/dybeck/Documents/sublime/php-api.sublime-project"
+					],
+					[
+						"oxid",
+						"/home/dybeck/Documents/sublime/oxid.sublime-project"
+					],
+					[
+						"php",
+						"/home/dybeck/Documents/sublime/php-checkout.sublime-project"
+					]
+				],
+				"width": 380.0
+			},
+			"show_minimap": true,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 296.0,
+			"status_bar_visible": true
+		},
+		"new_window_width": 1078.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"py",
+						"python"
+					],
+					[
+						"loca",
+						"localeString"
+					],
+					[
+						"langua",
+						"languageModel"
+					],
+					[
+						"hig",
+						"highlightType"
+					],
+					[
+						"callb",
+						"callbackFunc"
+					],
+					[
+						"modu",
+						"module_id"
+					],
+					[
+						"base",
+						"base64_decode"
+					],
+					[
+						"coo",
+						"cookies"
+					],
+					[
+						"cook",
+						"cookieData"
+					],
+					[
+						"an",
+						"anchor"
+					],
+					[
+						"navi",
+						"navigation_id"
+					],
+					[
+						"str_rep",
+						"str_replace"
+					],
+					[
+						"one",
+						"onepage"
+					],
+					[
+						"seo",
+						"seoPath"
+					],
+					[
+						"nav",
+						"navigation_id"
+					],
+					[
+						"model",
+						"modelFacade"
+					],
+					[
+						"na",
+						"navigations"
+					],
+					[
+						"auth",
+						"authors"
+					],
+					[
+						"loc",
+						"location"
+					],
+					[
+						"paym",
+						"paymentMethod"
+					],
+					[
+						"pay",
+						"paymentMethod"
+					],
+					[
+						"KLARNA",
+						"KLARNA_DIR"
+					],
+					[
+						"invoice_",
+						"invoice_tax"
+					],
+					[
+						"shi",
+						"shipping_discount_amount"
+					],
+					[
+						"req",
+						"req1	require_once …"
+					],
+					[
+						"shipp",
+						"shipping_fee"
+					],
+					[
+						"invo",
+						"invoice_tax"
+					],
+					[
+						"inv",
+						"invoice_tax"
+					],
+					[
+						"cou",
+						"country"
+					],
+					[
+						"extras",
+						"_extras"
+					],
+					[
+						"ex",
+						"extras"
+					],
+					[
+						"ga",
+						"gateway_extras"
+					],
+					[
+						"extra",
+						"extraFees"
+					],
+					[
+						"klarna",
+						"klarnaPaymentModule"
+					],
+					[
+						"klar",
+						"klarna_specpayment"
+					],
+					[
+						"kla",
+						"klarna_partpayment"
+					],
+					[
+						"kre",
+						"kreditor_partpayment"
+					],
+					[
+						"getId",
+						"getIdSuffix"
+					],
+					[
+						"shar",
+						"sharedSecret"
+					],
+					[
+						"KiTT",
+						"KiTT_Locale"
+					],
+					[
+						"lo",
+						"logic"
+					],
+					[
+						"fun",
+						"function"
+					],
+					[
+						"getCountr",
+						"getCountryId"
+					],
+					[
+						"isCo",
+						"isCompanyAllowed"
+					],
+					[
+						"getCou",
+						"getCountryId"
+					],
+					[
+						"Kitt",
+						"KiTT_CountryLogic"
+					],
+					[
+						"getCompa",
+						"getCompanyName"
+					],
+					[
+						"addre",
+						"addressHelper"
+					],
+					[
+						"add",
+						"addressHelper"
+					],
+					[
+						"isCom",
+						"isCompany"
+					],
+					[
+						"KiTT_",
+						"KiTT_CountryLogic"
+					],
+					[
+						"array_key",
+						"array_key_exists"
+					],
+					[
+						"klarn",
+						"klarnaAddr"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/css/1140.css",
+					"settings":
+					{
+						"buffer_size": 1637,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/css/main.css",
+					"settings":
+					{
+						"buffer_size": 5939,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/css/forms.css",
+					"settings":
+					{
+						"buffer_size": 4522,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna/navigation.js",
+					"settings":
+					{
+						"buffer_size": 4904,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna/menuscrolling.js",
+					"settings":
+					{
+						"buffer_size": 4119,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/dybeck/projects/other/web-integration/build/protected/controllers/ApiController.php",
+					"settings":
+					{
+						"buffer_size": 32915,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 62.0,
+				"selected_items":
+				[
+					[
+						"disab",
+						"Package Control: Disable Package"
+					],
+					[
+						"packa",
+						"Package Control: Enable Package"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 647.0
+			},
+			"console":
+			{
+				"height": 0.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/dybeck/.Xdefaults",
+				"/home/dybeck/projects/other/web-integration/src/wwwroot/css/styles.css",
+				"/home/dybeck/projects/other/web-integration/build/wwwroot/css/main.css",
+				"/home/dybeck/projects/other/web-integration/src/protected/controllers/BaseDocsController.php",
+				"/home/dybeck/projects/other/web-integration/src/wwwroot/index.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/components/widgets/PageModuleCodeExampleWidget.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/components/widgets/views/templates/error_codes_list.php",
+				"/home/dybeck/Downloads/Export_From_DocsIntegration_en_GB.xlf",
+				"/home/dybeck/projects/other/web-integration/build/protected/components/widgets/views/templates/error_codes_list.php",
+				"/home/dybeck/projects/libraries/python-checkout/README.md",
+				"/home/dybeck/projects/libraries/python-checkout/CHANGELOG",
+				"/home/dybeck/projects/other/web-integration/dist/build/web/opt/klarna-docs/web/protected/components/widgets/views/templates/error_codes_list.php",
+				"/home/dybeck/projects/images.css",
+				"/home/dybeck/projects/mintcdn-staging.css",
+				"/home/dybeck/projects/libraries/asp-api/CHANGELOG",
+				"/home/dybeck/projects/libraries/asp-checkout/CHANGELOG",
+				"/home/dybeck/projects/libraries/python-checkout/README",
+				"/home/dybeck/projects/libraries/java-checkout/CHANGELOG",
+				"/home/dybeck/projects/other/web-integration/build/wwwroot/index.php",
+				"/opt/klarna-docs/code/asp-checkout/Klarna.Asp.Examples/Checkout.asp",
+				"/home/dybeck/projects/libraries/dotnet-checkout/Klarna.Kco.Examples/Create.cs",
+				"/home/dybeck/projects/libraries/dotnet-checkout/Klarna.Kco.Examples/Fetch.cs",
+				"/home/dybeck/projects/libraries/dotnet-checkout/Klarna.Kco.Examples/Update.cs",
+				"/home/dybeck/projects/other/web-integration/dist/templates/web/debian/postinst",
+				"/home/dybeck/projects/other/web-integration/build/protected/controllers/BaseDocsController.php",
+				"/home/dybeck/.ssh/known_hosts",
+				"/home/dybeck/projects/other/web-integration/src/wwwroot/css/1140.css",
+				"/home/dybeck/projects/chrome.html",
+				"/home/dybeck/projects/other/web-integration/src/protected/components/widgets/views/page_module_code_example.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/config/local.php",
+				"/home/dybeck/projects/other/web-integration/dist/scripts/update-dev-app1",
+				"/home/dybeck/projects/other/web-integration/src/protected/components/widgets/NavigationWidget.php",
+				"/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna/main.js",
+				"/home/dybeck/Downloads/Export_From_DocsIntegration.xlf",
+				"/home/dybeck/projects/firefox.mustache",
+				"/home/dybeck/projects/other/web-integration/dist/build/web/opt/klarna-docs/web/protected/components/widgets/PageModuleCodeExampleWidget.php",
+				"/home/dybeck/projects/other/web-integration/dist/build/web/DEBIAN/postinst",
+				"/home/dybeck/projects/other/web-integration/build/protected/components/widgets/views/page_module_code_example.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/components/widgets/PageModuleCodeExampleWidget.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/config/global.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/components/Functions.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/components/GitBlob.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/components/widgets/views/page_module_code_example_panel.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/components/widgets/views/page_module_code_example_panel.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/components/widgets/views/page_module_code_example_tab.php",
+				"/home/dybeck/projects/other/web-integration/build/yii/framework/web/widgets/CWidget.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/controllers/SettingsController.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/components/Functions.php",
+				"/home/dybeck/projects/other/web-integration/src/yii/framework/web/CHttpCookie.php",
+				"/home/dybeck/projects/other/web-integration/src/yii/framework/web/CHttpRequest.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/config/global.php",
+				"/home/dybeck/projects/other/web-integration/src/yii/framework/base/CSecurityManager.php",
+				"/home/dybeck/projects/other/web-integration/src/yii/framework/web/CWebApplication.php",
+				"/home/dybeck/projects/other/web-integration/src/yii/framework/web/CHttpSession.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/config/application.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/controllers/SettingsController.php",
+				"/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna/navigation.js",
+				"/home/dybeck/projects/other/web-integration/src/protected/components/widgets/PageModuleTextWidget.php",
+				"/home/dybeck/projects/libraries/java-api/build.xml",
+				"/home/dybeck/projects/other/web-integration/src/protected/tests/bootstrap.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/tests/unit/SettingsControllerTest.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/tests/unit/SiteControllerPageTest.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/controllers/SiteController.php",
+				"/home/dybeck/projects/other/web-integration/src/wwwroot/css/main.css",
+				"/home/dybeck/projects/other/web-integration/build.xml",
+				"/etc/php5/apache2/php.ini",
+				"/etc/php5/cli/php.ini",
+				"/home/dybeck/projects/libraries/java-api/CHANGELOG.txt",
+				"/home/dybeck/projects/other/web-integration/src/protected/models/NavigationModel.php",
+				"/home/dybeck/projects/other/web-integration/src/protected/components/widgets/PageContentWidget.php",
+				"/home/dybeck/projects/other/web-integration/src/wwwroot/js/lib/jquery/jquery.nav.js",
+				"/home/dybeck/projects/other/web-integration/src/yii/framework/zii/widgets/CMenu.php",
+				"/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna/sidebarscroll.js",
+				"/home/dybeck/projects/other/web-integration/build/protected/components/widgets/PageContentWidget.php",
+				"/home/dybeck/projects/other/web-integration/build/yii/framework/zii/widgets/CMenu.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/components/widgets/NavigationWidget.php",
+				"/home/dybeck/projects/other/web-integration/build/wwwroot/js/main.js",
+				"/home/dybeck/projects/other/web-integration/build/protected/models/NavigationModel.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/models/PageContentModel.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/controllers/ModelFacadeImpl.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/controllers/ModelFacadeInterface.php",
+				"/home/dybeck/projects/other/web-integration/build/yii/framework/web/CWebApplication.php",
+				"/home/dybeck/projects/other/web-integration/build/yii/framework/web/helpers/CHtml.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/controllers/SiteController.php",
+				"/home/dybeck/projects/other/web-integration/build/yii/framework/web/helpers/CJSON.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/components/widgets/views/templates/contact_us_page.php",
+				"/home/dybeck/projects/other/web-integration/build/yii/framework/web/CController.php",
+				"/home/dybeck/projects/other/web-integration/build/protected/models/ParameterModel.php",
+				"/home/dybeck/.config/awesome/personal.lua",
+				"/home/dybeck/.config/awesome/helpers.lua",
+				"/home/dybeck/.config/awesome.bak/rc.lua",
+				"/home/dybeck/.config/awesome/rc.lua",
+				"/var/www/web-integration/build/protected/models/ParameterModel.php",
+				"/var/www/web-integration/src/protected/config/local.php",
+				"/var/www/web-integration/build.xml",
+				"/var/www/web-integration/build.properties",
+				"/var/www/apis/git/xtcommerce_testdata/_INSTALL_TESTDATA.sql",
+				"/var/www/apis/git/xtcommerce/_INSTALL.sql",
+				"/var/www/mockups/mock.all.css",
+				"/var/www/mockups/kco/1.1-121105152408/themes/current/css/all.css",
+				"/var/www/mockups/mock.styles.css",
+				"/var/www/mockups/index.html",
+				"/var/www/mockups/all.css",
+				"/var/www/mockups/all-missing.html",
+				"/var/www/magento/app/code/core/Mage/Connect/Block/Adminhtml/Extension/Custom/Edit/Tab/Package.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Pclass.php",
+				"/home/dybeck/projects/libraries/php-api/CHANGELOG",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Gateway/Abstract.php",
+				"/home/dybeck/projects/modules/magento/phpunit/Helper/Checkout/TestOnestep.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Payment.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Quote.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Helper.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Block/Product/Price.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Model/Observer.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Api.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Data.php",
+				"/home/dybeck/projects/modules/magento/build.xml",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Checkout/Onestep.php",
+				"/home/dybeck/projects/modules/magento/app/code/community/Klarna/KlarnaPaymentModule/Block/Klarna/Shared.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/XmlRpc.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/stubs.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/App.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Session.php",
+				"/home/dybeck/projects/modules/magento/phpunit/stubs/Mage.php",
+				"/var/www/magento/app/code/community/Klarna/KlarnaPaymentModule/Helper/Data.php",
+				"/var/www/apis/git/xtcommerce/_PERMISSIONS",
+				"/var/www/apis/git/oxid/_PERMISSIONS",
+				"/var/www/apis/oxid/v4.5.5/dev_23259341/_PERMISSIONS"
+			],
+			"find":
+			{
+				"height": 36.0
+			},
+			"find_in_files":
+			{
+				"height": 93.0,
+				"where_history":
+				[
+					"/home/dybeck/projects/other/web-integration/src/wwwroot/css",
+					"<project>",
+					"/home/dybeck/projects/other/web-integration/src/wwwroot/css",
+					"/home/dybeck/projects/other/web-integration/",
+					"/home/dybeck/projects/other/web-integration/src/",
+					"/home/dybeck/projects/other/web-integration/src/wwwroot/",
+					"/home/dybeck/projects/other/web-integration/src/wwwroot/css",
+					"<project>",
+					"/home/dybeck/projects/other/web-integration/src/protected/controllers",
+					"/home/dybeck/projects/other/web-integration/src/protected",
+					"/home/dybeck/projects/other/web-integration/src/protected/models",
+					"<project>",
+					"/home/dybeck/projects/other/web-integration/src/wwwroot/js",
+					"/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna",
+					"<project>",
+					"/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna",
+					"/home/dybeck/projects/other/web-integration/src/yii/framework",
+					"/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna",
+					"/home/dybeck/projects/other/web-integration/build/protected",
+					"/home/dybeck/projects/other/web-integration/src",
+					"/home/dybeck/projects/other/web-integration/build/protected/components",
+					"/home/dybeck/projects/other/web-integration/build/protected/components/widgets/views",
+					"/home/dybeck/projects/other/web-integration/build/yii/framework",
+					"/home/dybeck/projects/other/web-integration/build/",
+					"/home/dybeck/projects/other/web-integration/build/yii/framework/web",
+					"<project>",
+					"/home/dybeck/projects/other/web-integration/build",
+					"<project>",
+					"/home/dybeck/projects/other/web-integration/build/protected",
+					"<project>",
+					"/home/dybeck/projects/other/web-integration",
+					"/home/dybeck/projects/modules/magento/app/code/community/Klarna",
+					"/home/dybeck/projects/modules/magento/app/code",
+					"<project>",
+					"/home/dybeck/projects/modules/magento/app/code/community",
+					"/home/dybeck/projects/modules/magento/app/code",
+					"/home/dybeck/projects/modules/magento",
+					"/home/dybeck/projects/modules/magento/app/code/community",
+					"<project>/app/",
+					"<project>",
+					"/home/dybeck/projects/modules/magento/",
+					"/home/dybeck/projects/modules/magento/app",
+					"<project>",
+					"/home/dybeck/projects/modules/magento/app/code/community/Klarna",
+					"<project>",
+					"/home/dybeck/projects/modules/magento/app/code/community/Klarna"
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": true,
+				"find_history":
+				[
+					"filea",
+					"@media",
+					"ASP",
+					"en-DV",
+					"en-GB",
+					"en-US",
+					"fulfill",
+					"fullfill",
+					"error_codes_list",
+					"{",
+					"}",
+					"{",
+					"}",
+					"{",
+					"python",
+					"sudo",
+					"width",
+					".row",
+					"prow",
+					"row",
+					"container",
+					"row",
+					"Downloads",
+					"Download",
+					"java",
+					"sudo",
+					"$match = preg_match(\n            '/^' . Functions::LOCALE_FORMAT . '$/', $localeString\n        );\n        if (!$match) {\n            throw new DocsException_LocaleBadFormat(\n                \"Locale {$localeString} does not follow correct format '\" .\n                Functions::LOCALE_FORMAT . \"'\"\n            );\n        }",
+					"_languages",
+					"csharp",
+					"asp",
+					"python",
+					"math",
+					"repoName",
+					"_getGitRepo",
+					"type",
+					"page_module_code_example_tab",
+					"_getProgrammingLanguage",
+					"flog",
+					"hash_hmac",
+					"setcookie",
+					"addCookie",
+					"setCookie",
+					"getValidationKey",
+					".optionsdisplay",
+					"tests",
+					"phpunit",
+					"DEBUG",
+					"log",
+					"access.log",
+					"getNavigationPath",
+					"url",
+					"normaze",
+					"normazileUrl",
+					"url",
+					"onepage",
+					"scrollSpeed",
+					"onePageNav",
+					"flog",
+					"href",
+					"location",
+					"window.location",
+					"renderMenuItem",
+					"current_navigation",
+					"parent_navigation",
+					"'active'",
+					"class CMenu",
+					"$nav",
+					"nav",
+					"href",
+					"window.location",
+					"'active'",
+					"active",
+					"\"active\"",
+					"activeCssClass",
+					"'active'",
+					"parent",
+					"onePageNav",
+					"changeHash",
+					"flog",
+					"default",
+					"getting",
+					"flog",
+					"one_page_navigation",
+					"subtree",
+					"CHtml",
+					"getUrlParts",
+					"url",
+					"getNavi",
+					"getAllPa",
+					"redirect",
+					"getUrlParts",
+					"FindStartPage",
+					"actionFindStartPage",
+					"screen.",
+					"screen",
+					"class Functions",
+					"getCurrentPath",
+					"redirec",
+					"seo",
+					"CList",
+					"BUILD_DIR",
+					"xt_language",
+					"English",
+					"#",
+					"\"#\"",
+					"createUrl",
+					"seo",
+					"purchase-area",
+					".ldesktop",
+					"change-address",
+					"change_address",
+					"echo \"",
+					"getPa",
+					"getPaymentCode",
+					"fetchPclasses",
+					"setTemplate",
+					"paymentMethod",
+					"storeCode",
+					"country",
+					"getData",
+					"getLogo",
+					" [type]",
+					"terms",
+					"dirname(dirname(dirname(dirname(__FILE__))))",
+					"locale",
+					"locales",
+					"country",
+					"locale"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"en-GB",
+					"en-US",
+					"en-DV",
+					"{\n",
+					"}\n",
+					"{\n{\n",
+					"{\n}\n",
+					"{\n",
+					"KiTT::countryLogic(KiTT::locale($1));"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 5,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/css/1140.css",
+							"settings":
+							{
+								"buffer_size": 1637,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1636,
+										1636
+									]
+								],
+								"settings":
+								{
+									"function_name_status_row": 87,
+									"syntax": "Packages/CSS/CSS.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 991.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/css/main.css",
+							"settings":
+							{
+								"buffer_size": 5939,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"function_name_status_row": 0,
+									"syntax": "Packages/CSS/CSS.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 246.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/css/forms.css",
+							"settings":
+							{
+								"buffer_size": 4522,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2930,
+										2930
+									]
+								],
+								"settings":
+								{
+									"function_name_status_row": 173,
+									"syntax": "Packages/CSS/CSS.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 2223.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna/navigation.js",
+							"settings":
+							{
+								"buffer_size": 4904,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"function_name_status_row": 0,
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1443.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/home/dybeck/projects/other/web-integration/src/wwwroot/js/klarna/menuscrolling.js",
+							"settings":
+							{
+								"buffer_size": 4119,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"function_name_status_row": 0,
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 234.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"file": "/home/dybeck/projects/other/web-integration/build/protected/controllers/ApiController.php",
+							"settings":
+							{
+								"buffer_size": 32915,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1261,
+										1261
+									]
+								],
+								"settings":
+								{
+									"function_name_status_row": 46,
+									"syntax": "Packages/PHP/PHP.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 36.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 248.0
+			},
+			"output.jslint_result_view":
+			{
+				"height": 86.0
+			},
+			"position": "0,0,0,0,0,0,18,1078,1918,1080,1920",
+			"replace":
+			{
+				"height": 68.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+					[
+						"apc",
+						"build/protected/controllers/ApiController.php"
+					],
+					[
+						"secur",
+						"src/yii/framework/base/CSecurityManager.php"
+					],
+					[
+						"app",
+						"src/yii/framework/web/CWebApplication.php"
+					],
+					[
+						"chttpcoo",
+						"src/yii/framework/web/CHttpCookie.php"
+					],
+					[
+						"navi",
+						"src/protected/components/widgets/NavigationWidget.php"
+					],
+					[
+						"naviga",
+						"src/protected/models/NavigationModel.php"
+					],
+					[
+						"fun",
+						"build/protected/components/Functions.php"
+					],
+					[
+						"func",
+						"src/protected/components/Functions.php"
+					],
+					[
+						"glob",
+						"src/protected/config/global.php"
+					],
+					[
+						"observer",
+						"app/code/community/Klarna/KlarnaPaymentModule/Model/Observer.php"
+					]
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 500.0,
+				"selected_items":
+				[
+					[
+						"tuna",
+						"/home/dybeck/Documents/sublime/tuna.sublime-project"
+					],
+					[
+						"tun",
+						"/home/dybeck/Documents/sublime/tuna.sublime-project"
+					],
+					[
+						"t",
+						"/home/dybeck/Documents/sublime/tuna.sublime-project"
+					],
+					[
+						"pytho",
+						"/home/dybeck/Documents/sublime/python-checkout.sublime-project"
+					],
+					[
+						"static",
+						"/home/dybeck/Documents/sublime/static.sublime-project"
+					],
+					[
+						"oxid",
+						"/home/dybeck/Documents/sublime/oxid.sublime-project"
+					],
+					[
+						"asp",
+						"/home/dybeck/Documents/sublime/asp-api.sublime-project"
+					],
+					[
+						"checkout",
+						"/home/dybeck/Documents/sublime/php-checkout.sublime-project"
+					],
+					[
+						"dot",
+						"/home/dybeck/Documents/sublime/dotnet-checkout.sublime-project"
+					],
+					[
+						"checkou",
+						"/home/dybeck/Documents/sublime/java-checkout.sublime-project"
+					],
+					[
+						"web",
+						"/home/dybeck/Documents/sublime/web-integration.sublime-project"
+					],
+					[
+						"ms",
+						"/home/dybeck/Documents/sublime/msbo.sublime-project"
+					],
+					[
+						"m",
+						"/home/dybeck/Documents/sublime/msbo.sublime-project"
+					],
+					[
+						"py",
+						"/home/dybeck/Documents/sublime/python-api.sublime-project"
+					],
+					[
+						"python",
+						"/home/dybeck/Documents/sublime/python-api.sublime-project"
+					],
+					[
+						"",
+						"/home/dybeck/Documents/sublime/opencart.sublime-project"
+					],
+					[
+						"java",
+						"/home/dybeck/Documents/sublime/java.sublime-project"
+					],
+					[
+						"check",
+						"/home/dybeck/Documents/sublime/php-checkout.sublime-project"
+					],
+					[
+						"php-chec",
+						"/home/dybeck/Documents/sublime/php-checkout.sublime-project"
+					],
+					[
+						"php-api",
+						"/home/dybeck/Documents/sublime/php-api.sublime-project"
+					],
+					[
+						"php",
+						"/home/dybeck/Documents/sublime/php-checkout.sublime-project"
+					]
+				],
+				"width": 380.0
+			},
+			"show_minimap": true,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 358.0,
+			"status_bar_visible": true,
+			"window_id": 52,
+			"workspace_name": "/home/dybeck/Documents/sublime/web-integration.sublime-project"
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+			"/home/dybeck/Documents/sublime/web-integration.sublime-project",
+			"/home/dybeck/Documents/sublime/msbo.sublime-project",
+			"/home/dybeck/Documents/sublime/zencart.sublime-project",
+			"/home/dybeck/Documents/sublime/apis-api.sublime-project",
+			"/home/dybeck/Documents/sublime/magento.sublime-project",
+			"/home/dybeck/Documents/sublime/gittern.sublime-project",
+			"/home/dybeck/Documents/sublime/dotnet.sublime-project",
+			"/home/dybeck/Documents/sublime/kitt.sublime-project",
+			"/home/dybeck/Documents/sublime/oscommerce.sublime-project",
+			"/home/dybeck/Documents/sublime/python-api.sublime-project",
+			"/home/dybeck/Documents/sublime/static.sublime-project",
+			"/home/dybeck/Documents/sublime/node-xmlrpc.sublime-project",
+			"/home/dybeck/Documents/sublime/kif.sublime-project",
+			"/home/dybeck/Documents/sublime/xtcommmerce.sublime-project",
+			"/home/dybeck/Documents/sublime/oxid.sublime-project",
+			"/home/dybeck/Documents/sublime/minimal_klarna.sublime-project",
+			"/home/dybeck/Documents/sublime/aj.sublime-project",
+			"/home/dybeck/Documents/sublime/dotnet-checkout.sublime-project",
+			"/home/dybeck/Documents/sublime/tuna.sublime-project",
+			"/home/dybeck/Documents/sublime/dotnet-ng.sublime-project",
+			"/home/dybeck/Documents/sublime/java.sublime-project",
+			"/home/dybeck/Documents/sublime/asp-api.sublime-project",
+			"/home/dybeck/Documents/sublime/python-checkout.sublime-project",
+			"/home/dybeck/Documents/sublime/asp-checkout.sublime-project",
+			"/home/dybeck/Documents/sublime/php-checkout.sublime-project",
+			"/home/dybeck/Documents/sublime/java-checkout.sublime-project",
+			"/home/dybeck/Documents/sublime/cia.sublime-project",
+			"/var/www/mockups/web-integration.sublime-project",
+			"/home/dybeck/Documents/sublime/veyton.sublime-project",
+			"/home/dybeck/Documents/sublime/opencart.sublime-project",
+			"/home/dybeck/Documents/sublime/php-api.sublime-project",
+			"/home/dybeck/Documents/sublime/mstools.sublime-project",
+			"/home/dybeck/Documents/sublime/vmart.sublime-project",
+			"/home/dybeck/Documents/sublime/prestashop.sublime-project",
+			"/home/dybeck/Documents/sublime/magento_co2.sublime-project",
+			"/home/dybeck/Documents/sublime/ruby_gem.sublime-project",
+			"/home/dybeck/Documents/sublime/ruby.sublime-project",
+			"/home/dybeck/projects/oscommerce/oscommerce.sublime-project",
+			"/home/dybeck/projects/oxid/oxid.sublime-project",
+			"/home/dybeck/projects/virtuemart/vmart.sublime-project"
+		]
+	}
+}

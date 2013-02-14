@@ -1,0 +1,6 @@
+{
+    "cmd": ["phpcs","--standard=PEAR","$file"],
+    "selector": "source.php",
+    "file_regex": "FILE: (.*)",
+    "line_regex": "^[ ]+([0-9]+)"
+}

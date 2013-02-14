@@ -1,0 +1,20 @@
+
+    [
+        {
+            "id": "view",
+            "children":
+            [
+                {
+                    "caption": "live css colorizing",
+                    "children":
+                    [
+                    {"caption": "Toggle livecss locally",
+                    "command": "toggle_local_live_css"},
+                    {"caption": "Toggle livecss globally",
+                    "command": "toggle_global_live_css"}
+                    ]
+                }
+            ]
+        }
+    ]
+    

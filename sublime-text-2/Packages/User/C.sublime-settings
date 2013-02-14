@@ -1,0 +1,28 @@
+{
+    "color_scheme": "Packages/Color Scheme/Tomorrow-Night-Bright.tmTheme",
+    "draw_minimap_border": true,
+    "ensure_newline_at_eof_on_save": true,
+    "fallback_encoding": "UTF-8",
+    "font_face": "Inconsolata",
+    "font_size": 8,
+    "gutter": true,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "ignored_words":
+    [
+        "Klarna",
+        "Prestashop",
+        "Smarty",
+        "xmlrpc"
+    ],
+    "rulers":
+    [
+        80
+    ],
+    "tab_size": 8,
+    "theme": "Nil.sublime-theme",
+    "translate_tabs_to_spaces": false,
+    "trim_trailing_white_space_on_save": true
+}

@@ -1,0 +1,15 @@
+{
+	"color_scheme": "Packages/Themes/Kerberos.tmTheme",
+	"draw_minimap_border": true,
+	"ensure_newline_at_eof_on_save": true,
+	"fallback_encoding": "UTF-8",
+	"font_size": 9,
+	"gutter": true,
+	"rulers":
+	[
+		80
+	],
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
