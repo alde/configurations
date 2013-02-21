@@ -1,0 +1,21 @@
+[user]
+	name = alde
+	email = r.dybeck@gmail.com
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 358x949+720+18
+	main-window-view = HistoryView
+	history-view-vpane-position = 608
+	file-view-vpane-position = 658
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log --graph --pretty=\"format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset\"
