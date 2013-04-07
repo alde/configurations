@@ -94,7 +94,7 @@ RPS1='${vcs_info_msg_0_}'
 bindkey "^[[6~" end-of-history # Page up
 bindkey "^[[5~" insert-last-word # Page down
 
-export PATH=$PATH:$HOME/bin
+export PATH=$HOME/bin:$PATH
 export UZBL_DOWNLOAD_DIR=$HOME/Downloads
 export GREP_OPTIONS='--color=auto'
 export LESS=-R
