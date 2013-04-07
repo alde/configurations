@@ -19,3 +19,5 @@
   co = checkout
   df = diff
   lg = log --graph --pretty=\"format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset\"
+[push]
+	default = current
