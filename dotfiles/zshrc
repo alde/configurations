@@ -100,15 +100,14 @@ export GREP_OPTIONS='--color=auto'
 export LESS=-R
 export STATICU=rickard.dybeck
 
-##### ESTORE PLATFORMS #########################################################
-export MAGENTO_DIR='/var/www/magento'
-export PRESTASHOP_DIR='/var/www/prestashop/1441'
-
 alias ll='ls -lah --color=auto'
 alias ls='ls --color=auto'
 alias diff='colordiff'
 alias s='sublime'
 alias cs='phpcs --standard=PEAR'
+# For http://www.beatex.org/web/advancedcopy.html#precompiled
+alias cp='cp -g'
+alias mv='mv -g'
 
 if [[ "$TERM" != emacs ]]; then
 [[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char
