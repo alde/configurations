@@ -16,6 +16,9 @@ local limits = {{25, 5},
 
 function getnextlim (num)
     for ind, pair in pairs(limits) do
+    	if (pair == nil or limits == nil) then
+    		return 0
+    	end
         lim = pair[1]; step = pair[2]; nextlim = limits[ind+1][1] or 0
         if num > nextlim then
             repeat

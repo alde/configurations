@@ -197,6 +197,7 @@ for s = 1, screen.count() do
     right_layout:add(pacman_widget)
     -- right_layout:add(widgets.gmailwidget)
     right_layout:add(widgets.batterywidget)
+    right_layout:add(widgets.batterywidget_two)
     right_layout:add(widgets.volumewidget)
     right_layout:add(widgets.thermwidget)
     right_layout:add(widgets.kbdwidget)
@@ -286,6 +287,7 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86Suspend", function () awful.util.spawn_with_shell("sudo hibernate --lock-console-as moroz") end ),
     awful.key({ }, "XF86ScreenSaver", function () awful.util.spawn_with_shell("sudo vlock -an") end ),
     awful.key({ }, "XF86Sleep", function () awful.util.spawn_with_shell("sudo hibernate-ram --lock-console-as-moroz") end ),
+    awful.key({ "Control" }, "F3", function () awful.util.spawn_with_shell("slimlock") end ),
     awful.key({ }, "XF86AudioLowerVolume", function () widgets_fun.volume_down(widgets.volumewidget) end ),
     awful.key({ }, "XF86AudioRaiseVolume", function () widgets_fun.volume_up(widgets.volumewidget) end ),
     awful.key({ }, "XF86AudioMute", function () widgets_fun.volume_mute(widgets.volumewidget) end ),
@@ -527,6 +529,6 @@ end
 
 run_once("kbdd")
 run_once("xmodmap ~/scripts/swedish_keys")
-run_once("xbacklight -set 30")
+run_once("xbacklight -set 70")
 -- run_once("texmaker")
 -- }}}

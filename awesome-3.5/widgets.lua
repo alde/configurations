@@ -24,6 +24,14 @@ batterywidget.border_color = beautiful.fg_normal
 vicious.register(batterywidget, vicious.widgets.bat, widgets_fun.battery_state_format(),
                     11, "BAT0")
 
+-- Simple battery widget
+batterywidget_two = wibox.widget.textbox()
+batterywidget_two.name = "batterywidget_two"
+batterywidget_two.border_width = 1
+batterywidget_two.border_color = beautiful.fg_normal
+vicious.register(batterywidget_two, vicious.widgets.bat, widgets_fun.battery_state_format(),
+                    11, "BAT1")
+
 -- Simple volume widget
 volumewidget = wibox.widget.textbox()
 volumewidget.name = "volumewidget"
