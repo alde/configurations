@@ -171,7 +171,7 @@ vicious.register(batwidget, vicious.widgets.bat,
 			baticon.image = image(beautiful.widget_bat)
 			return "<span color='white'>".. args[2] .. "%</span>"
 		end
-	end, 61, "BAT0"
+	end, 61, "BAT1"
 )
 -- }}}
 
@@ -358,7 +358,7 @@ for s = 1, screen.count() do
         s == 1 and systray or nil, -- only show tray on first screen
         s == 1 and separator or nil, -- only show on first screen
         datewidget, dateicon,
-        baticon.image and separator, batwidget, baticon or nil,
+        -- baticon.image and separator, batwidget, baticon or nil,
         separator, volwidget,  volbar.widget, volicon,
         dnicon.image and separator, upicon, netwidget, dnicon or nil,
         separator, fs.r.widget, fs.s.widget, fsicon,
