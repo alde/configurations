@@ -105,9 +105,6 @@ alias ls='ls --color=auto'
 alias diff='colordiff'
 alias s='sublime'
 alias cs='phpcs --standard=PEAR'
-# For http://www.beatex.org/web/advancedcopy.html#precompiled
-alias cp='cp -g'
-alias mv='mv -g'
 
 if [[ "$TERM" != emacs ]]; then
 [[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char
@@ -137,4 +134,5 @@ if [[ "$TERM" != emacs ]]; then
 [[ "$terminfo[kend]" == "^[O"* ]] && bindkey -M emacs "${terminfo[kend]/O/[}" end-of-line
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.0.0/bin # Add RVM to PATH for scripting
+

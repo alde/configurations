@@ -1,11 +1,13 @@
 [user]
-	name = alde
-	email = r.dybeck@gmail.com
+	name = Rickard Dybeck
+	email = rickard.dybeck@klarna.com
 [color]
 	branch = auto
 	diff = auto
 	interactive = auto
 	status = auto
+[jira]
+    user = rickard.dybeck
 [giggle]
 	main-window-maximized = false
 	main-window-geometry = 358x949+720+18

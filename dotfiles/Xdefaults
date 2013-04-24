@@ -130,7 +130,7 @@ urxvt*utmpInhibit:            false
 !! selection-autotransform, selection-pastebin, selection-popup, tabbed,
 !! urxvt-popup, xim-onthespot
 URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: google-chrome
+URxvt.urlLauncher: chromium
 URxvt.matcher.button: 2
 URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 URxvt.keysym.C-o: perl:matcher
