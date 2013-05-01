@@ -1,7 +1,0 @@
-{
-    // Default pattern
-    "start_dir_pattern": "[^A-Z]+(.*)"
-
-    // Symfony 2 pattern
-    // "start_dir_pattern": ".*(?:src|vendor)/(.*)"
-}

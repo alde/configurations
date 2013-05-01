@@ -19,7 +19,9 @@ function getnextlim (num)
     	if (pair == nil or limits == nil) then
     		return 0
     	end
-        lim = pair[1]; step = pair[2]; nextlim = limits[ind+1][1] or 0
+        lim = pair[1] or 0;
+        step = pair[2] or 0;
+        nextlim = limits[ind+1][1] or 0
         if num > nextlim then
             repeat
                 lim = lim - step

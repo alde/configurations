@@ -101,7 +101,6 @@ urxvt*boldFont:             xft:DejaVu Sans Mono:pixelsize=12
 URxvt*geometry:         120x24
 !URxvt*font             xft:montecarlo=10
 URxvt*font:             xft:tamsyn:size=10
-URxvt*urlLauncher:         iceweasel
 URxvt*scrollBar:        false
 URxvt*scrollBar_right:        true
 URxvt*scrollColor:        #000000
@@ -129,8 +128,13 @@ urxvt*utmpInhibit:            false
 !! option-popup, readline, remote-clipboard, searchable-scrollback, selection,
 !! selection-autotransform, selection-pastebin, selection-popup, tabbed,
 !! urxvt-popup, xim-onthespot
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: chromium
-URxvt.matcher.button: 2
-URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
-URxvt.keysym.C-o: perl:matcher
+URxvt.perl-ext:      default,url-select
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.url-select.launcher:   /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
+
+!URxvt.perl-ext-common: default,matcher
+!URxvt.urlLauncher: firefox
+!URxvt.matcher.button: 2
+!URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+!URxvt.keysym.C-o: perl:matcher
