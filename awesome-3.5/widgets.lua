@@ -16,21 +16,27 @@ kbdwidget.border_width = 1
 kbdwidget.border_color = beautiful.fg_normal
 kbdwidget:set_text(" Eng | ")
 
--- Simple battery widget
-batterywidget = wibox.widget.textbox()
-batterywidget.name = "batterywidget"
-batterywidget.border_width = 1
-batterywidget.border_color = beautiful.fg_normal
-vicious.register(batterywidget, vicious.widgets.bat, widgets_fun.battery_state_format(),
-                    11, "BAT0")
+-- Battery Widget Combined
+bw = wibox.widget.textbox()
+bw.name = "battery_combined"
+bw.border_width = 1
+bw.border_color = beautiful.fg_normal
+vicious.register(bw, widgets_fun.battery, widgets_fun.battery_state_format(), 11, {"BAT0", "BAT1"})
 
--- Simple battery widget
-batterywidget_two = wibox.widget.textbox()
-batterywidget_two.name = "batterywidget_two"
-batterywidget_two.border_width = 1
-batterywidget_two.border_color = beautiful.fg_normal
-vicious.register(batterywidget_two, vicious.widgets.bat, widgets_fun.battery_state_format(),
-                    11, "BAT1")
+-- -- Simple battery widget
+-- batterywidget = wibox.widget.textbox()
+-- batterywidget.name = "batterywidget"
+-- batterywidget.border_width = 1
+-- batterywidget.border_color = beautiful.fg_normal
+-- vicious.register(batterywidget, vicious.widgets.bat, widgets_fun.battery_state_format(),
+--                     11, "BAT0")
+-- -- Simple battery widget
+-- batterywidget_two = wibox.widget.textbox()
+-- batterywidget_two.name = "batterywidget_two"
+-- batterywidget_two.border_width = 1
+-- batterywidget_two.border_color = beautiful.fg_normal
+-- vicious.register(batterywidget_two, vicious.widgets.bat, widgets_fun.battery_state_format(),
+--                     11, "BAT1")
 
 -- Simple volume widget
 volumewidget = wibox.widget.textbox()

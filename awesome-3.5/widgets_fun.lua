@@ -3,10 +3,15 @@ local vicious = require("vicious")
 local io = io
 local math = math
 local print = print
+local tonumber = tonumber
 local pairs = pairs
 local naughty = require("naughty")
 
 module("widgets_fun")
+
+function trim(s)
+    return s:find'^%s*$' and '' or s:match'^%s*(.*%S)'
+end
 
 -- Format function for battery widget
 local limits = {{25, 5},
@@ -34,13 +39,43 @@ function getnextlim (num)
     end
 end
 
+function battery()
+    local total_max = 0
+    local total_current = 0
+    local batteries = {"BAT0", "BAT1"}
+    local status = "unknown"
+
+    for i, bat in pairs(batteries) do
+        status = io.popen(
+            "cat /sys/class/power_supply/"..bat.."/status"
+        ):read("*all"):lower()
+
+        -- naughty.notify({text = status})
+        total_max = total_max + tonumber(
+            io.popen(
+                "cat /sys/class/power_supply/"..bat.."/energy_full"
+            ):read("*all")
+        )
+        total_current = total_current + tonumber(
+            io.popen(
+                "cat /sys/class/power_supply/"..bat.."/energy_now"
+            ):read("*all")
+        )
+    end
+
+    local time = trim(io.popen("~/bin/battery"):read("*all"))
+
+    return {trim(status), math.floor(total_current/total_max*100), time}
+end
+
 function battery_state_format()
     local nextlim = limits[1][1]
     return function (_, args)
         local state, charge, time = args[1], args[2], args[3];
         local prefix = "⚡"
         if not charge then return end
-        if state == "-" then
+
+        if state == "discharging" then
             dirsign = "↓"
             prefix = "Bat:"
             if charge <= nextlim then
@@ -53,7 +88,7 @@ function battery_state_format()
                                    })
                 nextlim = getnextlim(charge)
             end
-        elseif state == "+" then
+        elseif state == "charging" then
             dirsign = "↑"
             nextlim = limits[1][1]
         elseif state ==  "↯" then dirsign = "↯"

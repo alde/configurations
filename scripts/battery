@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+
+##
+# Battery class
+class Battery
+
+  attr_accessor :batteries
+
+  ##
+  # Constructor
+  def initialize
+    @batteries = [
+      "BAT0", "BAT1"
+    ]
+  end
+
+  ##
+  # Get combined time left for both batteries
+  def time_left
+    rate, energy = 0, 0
+    @batteries.each { |bat|
+      IO.popen("upower -i /org/freedesktop/UPower/devices/battery_#{bat}") do |p|
+        stream = p.read
+        if stream.include? "discharging"
+          rate = get_rate stream
+        elsif stream.include? "charging"
+          rate += get_rate stream
+        end
+        energy += get_energy stream
+      end
+    }
+
+    seconds = ((energy * 3600) / rate).floor
+
+    Time.at(seconds).gmtime.strftime '%R'
+  end
+
+  private
+    ##
+    # Get the current power usage rate
+    def get_rate stream
+      stream.scan(/energy-rate:\s+([0-9\.]+)\sW/).first.first.to_f
+    end
+
+    ##
+    # Get the current energy level
+    def get_energy stream
+      stream.scan(/energy:\s+([0-9\.]+)\sWh/).first.first.to_f
+    end
+end
+
+puts Battery.new.time_left
