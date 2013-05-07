@@ -17,22 +17,27 @@ class Battery
   ##
   # Get combined time left for both batteries
   def time_left
-    rate, energy = 0, 0
+    rate, energy, seconds = 0, 0, 0
     @batteries.each { |bat|
       IO.popen("upower -i /org/freedesktop/UPower/devices/battery_#{bat}") do |p|
         stream = p.read
         if stream.include? "discharging"
           rate = get_rate stream
         elsif stream.include? "charging"
+          seconds += get_time_to_full stream
           rate += get_rate stream
         end
         energy += get_energy stream
       end
     }
 
-    seconds = ((energy * 3600) / rate).floor
+    begin
+      seconds = ((energy * 3600) / rate).floor if seconds == 0
+      return Time.at(seconds).gmtime.strftime '%R'
+    rescue
+      return "N/A"
+    end
 
-    Time.at(seconds).gmtime.strftime '%R'
   end
 
   private
@@ -46,6 +51,14 @@ class Battery
     # Get the current energy level
     def get_energy stream
       stream.scan(/energy:\s+([0-9\.]+)\sWh/).first.first.to_f
+    end
+
+    def get_time_to_full stream
+      minutes = stream.scan(/time to full:\s+([0-9\.]+) minutes/)
+      return (minutes.first.first.to_f * 60).to_i unless minutes.empty?
+      hours = stream.scan(/time to full:\s+([0-9\.]+) hours/)
+      return (hours.first.first.to_f * 3600).to_i unless hours.empty?
+      return 0
     end
 end
 
