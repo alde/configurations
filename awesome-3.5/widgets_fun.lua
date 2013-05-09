@@ -40,7 +40,7 @@ function getnextlim (num)
 end
 
 function battery()
-    local total_max = 0
+    local total_max = 33630000 + 43710000
     local total_current = 0
     local batteries = {"BAT0", "BAT1"}
     local status = "unknown"
@@ -49,13 +49,6 @@ function battery()
         status = io.popen(
             "cat /sys/class/power_supply/"..bat.."/status"
         ):read("*all"):lower()
-
-        -- naughty.notify({text = status})
-        total_max = total_max + tonumber(
-            io.popen(
-                "cat /sys/class/power_supply/"..bat.."/energy_full"
-            ):read("*all")
-        )
         total_current = total_current + tonumber(
             io.popen(
                 "cat /sys/class/power_supply/"..bat.."/energy_now"
