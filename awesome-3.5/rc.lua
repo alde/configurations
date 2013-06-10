@@ -13,6 +13,7 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local wall = require("gears.wallpaper")
 local surface = require("gears.surface")
+local mymainmenu = require('mainmenu')
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -459,59 +460,6 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
--- Wallpaper changing
-
--- seed and "pop a few"
-math.randomseed( os.time())
-for i=1,1000 do tmp=math.random(0,1000) end
-
-x = 0
-
--- setup the timer
-mytimer = timer { timeout = x }
-mytimer:connect_signal("timeout", function()
-
-    wallpapers = {}
-    local function find_walls(path)
-        for entry in lfs.dir(wall_dir) do
-            if entry ~= "." and entry ~= ".." then
-                local f = path.."/"..entry
-                local mode = lfs.attributes(f, "mode")
-                if mode == "file" then
-                    table.insert(wallpapers, f)
-                elseif mode == "directory" then
-                    find_walls(f)
-                end
-            end
-        end
-    end
-    -- tell awsetbg to randomly choose a wallpaper from your wallpaper directory
-    wall_dir = awful.util.getdir("config") .. "/themes/wallpapers"
-    find_walls(wall_dir)
-    --for file in lfs.dir(wall_dir) do
-        --table.insert(wallpapers, file)
-    --end
-    wallpaper = wallpapers[math.random(1, #wallpapers)]
-    wallpaper = surface.load(wallpaper)
-    wall.set(wallpaper)
-
-
-
-    -- stop the timer (we don't need multiple instances running at the same time)
-    mytimer:stop()
-
-    -- define the interval in which the next wallpaper change should occur in seconds
-    -- (in this case anytime between 10 and 20 minutes)
-    x = math.random( 600, 1200)
-
-    --restart the timer
-    mytimer.timeout = x
-    mytimer:start()
-end)
-
--- initial start when rc.lua is first run
-mytimer:start()
-
 --Kbdd signal definition
 dbus.request_name("session", "ru.gentoo.kbdd")
 dbus.add_match("session", "interface='ru.gentoo.kbdd',member='layoutChanged'")
@@ -534,5 +482,7 @@ end
 run_once("kbdd")
 run_once("xmodmap ~/scripts/swedish_keys")
 run_once("xbacklight -set 70")
+run_once("feh --bg-scale ~/Pictures/Wallpapers")
+run_once("nm-applet")
 -- run_once("texmaker")
 -- }}}
