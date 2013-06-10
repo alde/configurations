@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+all_displays = ["LVDS1", "VGA1", "HDMI1", "DP1", "HDMI2", "HDMI3", "DP2", "DP3"]
+static = "LVDS1"
+
+connected = []
+`xrandr`.lines.each { |x|
+  m = /([A-Z]+[0-9]) connected/.match(x)
+  connected << m[1] unless m.nil?
+}
+
+discostring = ''
+(all_displays - connected).each { |x| discostring += "--output #{x} --off " }
+
+def single_display display, disconnected
+  `xrandr --output #{display} --auto #{disconnected}`
+end
+
+if (connected == [static] or connected.count > 2) then
+  puts "Setting up for single display (#{connected})"
+  single_display static, discostring
+end
+
+if (connected.count == 2) then
+  external = (connected - [static]).first
+  puts "Setting up for two displays. (#{connected}; external: #{external})"
+  s = ''
+  (all_displays - [static]).each { |x| s += "--output #{x} --off " }
+
+  single_display static, s
+ `xrandr --output #{external} --auto --left-of #{static}`
+end
