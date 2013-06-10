@@ -48,7 +48,7 @@ function battery()
 
     for i, bat in pairs(batteries) do
         total_max = total_max + tonumber(
-            io:popen(
+            io.popen(
                 "cat /sys/class/power_supply/"..bat.."/energy_full"
             ):read("*all")
         )

@@ -10,20 +10,19 @@ local mouse = mouse
 
 
 -- menu
-local terminal = "urxvtc "
-local man = "urxvtc -e man "
-local editor = "urxvtc -e vim "
-local browser = "luakit "
+local terminal = "urxvt "
+local man = "urxvt -e man "
+local editor = "urxvt -e vim "
 local run = "gmrun "
 local fileman = terminal .. " -e ranger "
-local torrent = terminal .. " -e rtorrentd "
 local messenger = "pidgin"
 
 local myawesomemenu = {
     { "Edit config", editor .. awful.util.getdir("config") .. "/rc.lua"},
-    { "Edit theme", editor .. awful.util.getdir("config") .. "/theme.lua" },
+    { "Edit widgets functions", editor .. awful.util.getdir("config") .. "/widgets_fun.lua" },
     { "Edit widgets", editor .. awful.util.getdir("config") .. "/widgets.lua" },
     { "Edit main menu", editor .. awful.util.getdir("config") .. "/mainmenu.lua" },
+    { "Edit calendar", editor .. awful.util.getdir("config") .. "/calendar2.lua" },
     { "Restart", awesome.restart },
     { "Stop", awesome.quit }
 }
@@ -34,8 +33,6 @@ local mymainmenu_items = {
     { "Run", run,  },
     { "Terminal", terminal,  },
     { "FileMan", fileman,  },
-    { "Browser", browser,  },
-    { "Torrent", torrent,  },
     { "Pidgin", messenger,  },
     { "< AppMenu >", appmenu_items,  },
     { "Awesome", myawesomemenu,  },
