@@ -40,18 +40,24 @@ function getnextlim (num)
 end
 
 function battery()
-    -- local total_max = 33630000 + 45390000
     local total_max = 0
     local total_current = 0
     local batteries = {"BAT0", "BAT1"}
     local status = "unknown"
 
     for i, bat in pairs(batteries) do
-        total_max = total_max + tonumber(
+        local max = tonumber(
             io.popen(
                 "cat /sys/class/power_supply/"..bat.."/energy_full"
             ):read("*all")
         )
+
+        if (max == nil) then
+            max = 0
+        end
+
+        total_max = total_max + max
+
         status = io.popen(
             "cat /sys/class/power_supply/"..bat.."/status"
         ):read("*all"):lower()

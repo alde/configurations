@@ -25,3 +25,5 @@
 	default = current
 [core]
 	editor = vim
+[rebase]
+	autosquash = true
