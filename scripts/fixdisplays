@@ -28,5 +28,5 @@ if (connected.count == 2) then
   (all_displays - [static]).each { |x| s += "--output #{x} --off " }
 
   single_display static, s
- `xrandr --output #{external} --auto --left-of #{static}`
+ `xrandr --output #{external} --auto --left-of #{static} --rotate left`
 end

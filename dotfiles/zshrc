@@ -105,6 +105,7 @@ alias ls='ls --color=auto'
 alias diff='colordiff'
 alias s='sublime'
 alias cs='phpcs --standard=PEAR'
+alias yum='yum -y'
 
 if [[ "$TERM" != emacs ]]; then
 [[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char

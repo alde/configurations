@@ -292,7 +292,7 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86Suspend", function () awful.util.spawn_with_shell("sudo hibernate --lock-console-as moroz") end ),
     awful.key({ }, "XF86ScreenSaver", function () awful.util.spawn_with_shell("sudo vlock -an") end ),
     awful.key({ }, "XF86Sleep", function () awful.util.spawn_with_shell("sudo hibernate-ram --lock-console-as-moroz") end ),
-    awful.key({ "Control" }, "F3", function () awful.util.spawn_with_shell("slimlock") end ),
+    awful.key({ "Control" }, "F3", function () awful.util.spawn_with_shell("xscreensaver-command --lock") end ),
     awful.key({ }, "XF86AudioLowerVolume", function () widgets_fun.volume_down(widgets.volumewidget) end ),
     awful.key({ }, "XF86AudioRaiseVolume", function () widgets_fun.volume_up(widgets.volumewidget) end ),
     awful.key({ }, "XF86AudioMute", function () widgets_fun.volume_mute(widgets.volumewidget) end ),
@@ -484,5 +484,6 @@ run_once("xmodmap ~/scripts/swedish_keys")
 run_once("xbacklight -set 70")
 run_once("feh --bg-scale ~/Pictures/Wallpapers")
 run_once("nm-applet")
+run_once("xscreensaver -nosplash")
 -- run_once("texmaker")
 -- }}}
