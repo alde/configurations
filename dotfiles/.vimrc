@@ -4,11 +4,12 @@ syntax on
 
 if has('gui_running')
     set background=light
+    colorscheme solarized
 else
     set background=dark
+    colorscheme desert
 endif
 
-colorscheme solarized
 
 set et
 set tabstop=4
