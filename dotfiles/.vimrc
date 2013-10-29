@@ -1,3 +1,4 @@
+execute pathogen#infect()
 " color scheme of the moment:
 syntax on
 
@@ -16,7 +17,6 @@ set backspace=indent,eol,start
 " Setup Extra whitespace highlighting
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
-execute pathogen#infect()
 autocmd FileType c,cpp,php,ruby,py,html,twig,java autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 filetype plugin indent on
