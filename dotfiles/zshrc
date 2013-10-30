@@ -106,6 +106,8 @@ alias diff='colordiff'
 alias s='sublime'
 alias cs='phpcs --standard=PEAR'
 alias yum='yum -y'
+alias ta='tmux attach -t'
+alias tn='tmux new -s'
 
 if [[ "$TERM" != emacs ]]; then
 [[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char
