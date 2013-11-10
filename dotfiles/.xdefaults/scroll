@@ -1,0 +1,10 @@
+urxvt*jumpScroll:           true
+urxvt*skipScroll:           true
+urxvt*mouseWheelScrollPage: false
+urxvt*scrollTtyOutput:      false
+urxvt*scrollWithBuffer:     false
+urxvt*scrollTtyKeypress:    true
+urxvt*scrollBar:            false
+URxvt*scrollBar_right:      true
+URxvt*scrollColor:          #000000
+
