@@ -51,21 +51,23 @@ require('calendar2')
 
 -- Pacman widget
 local vicious = require("vicious")
-local pacman_widget = wibox.widget.textbox()
-local pacman_widget_tooltip = awful.tooltip({ objects = {pacman_widget}})
-vicious.register(pacman_widget, vicious.widgets.pkg,
+local update_widget = wibox.widget.textbox()
+local update_widget_tooltip = awful.tooltip({ objects = {update_widget}})
+vicious.register(update_widget, vicious.widgets.pkg,
     function ( widget, args )
       local io = {popen = io.popen}
-      local s = io.popen("pacman -Qu")
+      local s = io.popen("yum check-update | grep -v '^$' | grep -v 'Loaded plugins:'")
       local str = ""
+      local c = 0
 
       for line in s:lines() do
         str = str .. line .. "\n"
+        c = c + 1
       end
 
-      pacman_widget_tooltip:set_text(str)
+      update_widget_tooltip:set_text(str)
       s:close()
-      return " | Updates: " .. args[1] .. " | "
+      return " | Updates: " .. c .. " | "
     end, 1800, "Arch")
 
 
@@ -198,7 +200,7 @@ for s = 1, screen.count() do
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(widgets.cpubar)
-    right_layout:add(pacman_widget)
+    right_layout:add(update_widget)
     -- right_layout:add(widgets.gmailwidget)
     right_layout:add(widgets.bw)
     -- right_layout:add(widgets.batterywidget)

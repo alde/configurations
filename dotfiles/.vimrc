@@ -19,6 +19,10 @@ set backspace=indent,eol,start
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 autocmd FileType c,cpp,php,ruby,py,html,twig,java autocmd BufWritePre <buffer> :%s/\s\+$//e
+nnoremap <CR> :noh<CR><CR>
+
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-Space>
 
 filetype plugin indent on
 au FileType ruby set softtabstop=2 tabstop=2 shiftwidth=2
