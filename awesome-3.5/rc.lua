@@ -68,7 +68,7 @@ vicious.register(update_widget, vicious.widgets.pkg,
       update_widget_tooltip:set_text(str)
       s:close()
       return " | Updates: " .. c .. " | "
-    end, 1800, "Arch")
+    end, 1800, "Fedora")
 
 
 -- This is used later as the default terminal and editor to run.
@@ -478,13 +478,13 @@ function run_once(prg)
     if not prg then
         do return nil end
     end
-    awful.util.spawn_with_shell("pgrep -f -u $USER -x " .. prg .. " || (" .. prg .. ")")
+    awful.util.spawn_with_shell("pgrep -f -u $USER -x '" .. prg .. "' || (" .. prg .. ")")
 end
 
-run_once("kbdd")
-run_once("xmodmap ~/scripts/swedish_keys")
+-- run_once("kbdd")
+-- run_once("xmodmap ~/scripts/swedish_keys")
 run_once("xbacklight -set 70")
-run_once("feh --bg-scale ~/Pictures/Wallpapers")
+run_once("feh --bg-scale ~/Pictures/Wallpapers/emacs_cheatsheet.png")
 run_once("nm-applet")
 run_once("xscreensaver -nosplash")
 -- run_once("texmaker")

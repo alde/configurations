@@ -128,7 +128,7 @@ function thermal_format(widget,args)
     local temp = args[1]
     if temp > 80 then
                 naughty.notify({title = "Внимание!",
-                        text = "Критический уровень тмпературы ("..temp.."°C)!",
+                        text = "Critical core temperature reached! ("..temp.."°C)!",
                         timeout = 3,
                         position = "bottom_right",
                         fg = beautiful.fg_focus,

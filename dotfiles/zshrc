@@ -6,8 +6,47 @@ fi
 HISTSIZE=5000
 SAVEHIST=10000
 
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+zstyle ':chpwd:profiles:/home/dybeck/git/work(|/|/*)'       profile work
+zstyle ':chpwd:profiles:/home/dybeck/git/private(|/|/*)'    profile private
+zstyle ':chpwd:profiles:/home/dybeck/git/external(|/|/*)'    profile private
+
+# configuration for profile 'private':
+chpwd_profile_private()
+{
+  [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+
+  export GIT_AUTHOR_EMAIL="r.dybeck@gmail.com"
+  export GIT_COMMITTER_EMAIL="r.dybeck@gmail.com"
+
+  print "chpwd(): Switching to profile: $profile ($GIT_AUTHOR_EMAIL)"
+}
+
+# configuration for profile 'work':
+chpwd_profile_work()
+{
+  [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
+
+  export GIT_AUTHOR_EMAIL="rickard.dybeck@klarna.com"
+  export GIT_COMMITTER_EMAIL="rickard.dybeck@klarna.com"
+
+  print "chpwd(): Switching to profile: $profile ($GIT_AUTHOR_EMAIL)"
+}
+
+CHPWD_PROFILE='work'
+function chpwd_profiles() {
+    local -x profile
+
+    zstyle -s ":chpwd:profiles:${PWD}" profile profile || profile='work'
+    if (( ${+functions[chpwd_profile_$profile]} )) ; then
+        chpwd_profile_${profile}
+    fi
+
+    CHPWD_PROFILE="${profile}"
+    return 0
+}
+chpwd_functions=( ${chpwd_functions} chpwd_profiles )
+chpwd_profile_work
+
 
 bindkey '\e[1~' beginning-of-line
 bindkey '\e[4~' end-of-line
@@ -81,8 +120,8 @@ local host="@%{$fg[yellow]%}%m${reset_color%}"
 PROMPT="%{$fg[red]%}╭─${path_p}%{$fg[red]%} ─ ${op}${username}${host}${cp}
 %{$fg[red]%}╰─${op}%T${cp}%{$fg[blue]%}»%{$reset_color%} "
 
-#PS1='%F{red}[%F{yellow}%B» %F{cyan}%~%b%F{red}]%f%D{%n}[%T] %B%F{green}%n%F{white}@%F{yellow}%U%B%m%u%F{white}> '
-RPS1='${vcs_info_msg_0_}'
+#PS1='%F{red}[%F{yellow}%B» %F{cyan}%~%b%F{red}]%f%D{%n}[%T] %B%F{green}%n%F{white}@%F{yellow}%U%B%m%u%F{white} > '
+RPS1='%{$reset_color%}%F{red}[%F{yellow}${CHPWD_PROFILE}%F{red}] %{$reset_color%}${vcs_info_msg_0_}'
 
 #bindkey   beginning-of-line
 #bindkey   end-of-line
@@ -105,7 +144,7 @@ alias ls='ls --color=auto'
 alias diff='colordiff'
 alias s='sublime'
 alias cs='phpcs --standard=PEAR'
-alias yum='yum -y'
+alias yum='sudo yum -y'
 alias ta='tmux attach -t'
 alias tn='tmux new -s'
 

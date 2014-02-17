@@ -46,8 +46,16 @@ urxvt*utmpInhibit:          false
 
 !!
 ! Colors - Solarized Light
-#include ".xdefaults/solarized_light"
+!#include ".xdefaults/solarized_light"
 
 !!
 ! Colors - Monokai
-!#include ".xdefaults/monokai"
+! #include ".xdefaults/monokai"
+
+!!
+! Colors - Monokai Two
+#include ".xdefaults/monokai_two"
+
+!!
+! Colors - HLVN
+!#include ".xdefaults/hlvn"
