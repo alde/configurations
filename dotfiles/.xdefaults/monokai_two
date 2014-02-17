@@ -1,0 +1,20 @@
+! Molokai theme
+*background: rgb:10/10/10
+*foreground: rgb:cc/66/00
+
+*color0: rgb:10/10/10
+*color1: rgb:96/00/50
+*color2: rgb:66/aa/11
+*color3: rgb:c4/7f/2c
+*color4: rgb:30/30/9b
+*color5: rgb:7e/40/a5
+*color6: rgb:35/79/a8
+*color7: rgb:99/99/aa
+*color8: rgb:30/30/30
+*color9: rgb:ff/00/90
+*color10: rgb:80/ff/00
+*color11: rgb:ff/ba/68
+*color12: rgb:5f/5f/ee
+*color13: rgb:bb/88/dd
+*color14: rgb:4e/b4/fa
+*color15: rgb:d0/d0/d0
