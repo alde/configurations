@@ -484,7 +484,7 @@ end
 -- run_once("kbdd")
 -- run_once("xmodmap ~/scripts/swedish_keys")
 run_once("xbacklight -set 70")
-run_once("feh --bg-scale ~/Pictures/Wallpapers/emacs_cheatsheet.png")
+run_once("feh --bg-scale ~/Pictures/Wallpapers/115874.jpg")
 run_once("nm-applet")
 run_once("xscreensaver -nosplash")
 -- run_once("texmaker")

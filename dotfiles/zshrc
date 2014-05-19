@@ -119,17 +119,9 @@ local username="%{$fg[green]%}%n%{$reset_color%}"
 local host="@%{$fg[yellow]%}%m${reset_color%}"
 PROMPT="%{$fg[red]%}╭─${path_p}%{$fg[red]%} ─ ${op}${username}${host}${cp}
 %{$fg[red]%}╰─${op}%T${cp}%{$fg[blue]%}»%{$reset_color%} "
-
-#PS1='%F{red}[%F{yellow}%B» %F{cyan}%~%b%F{red}]%f%D{%n}[%T] %B%F{green}%n%F{white}@%F{yellow}%U%B%m%u%F{white} > '
+### Right prompt
 RPS1='%{$reset_color%}%F{red}[%F{yellow}${CHPWD_PROFILE}%F{red}] %{$reset_color%}${vcs_info_msg_0_}'
 
-#bindkey   beginning-of-line
-#bindkey   end-of-line
-#bindkey "^[[7~" beginning-of-line # Home
-#bindkey "^[[8~" end-of-line # End
-#bindkey "^[[3~" delete-char # Delete
-#bindkey ^R  history-incremental-search-backward
-#
 bindkey "^[[6~" end-of-history # Page up
 bindkey "^[[5~" insert-last-word # Page down
 
@@ -138,6 +130,7 @@ export UZBL_DOWNLOAD_DIR=$HOME/Downloads
 export GREP_OPTIONS='--color=auto'
 export LESS=-R
 export STATICU=rickard.dybeck
+export CRACKLIB_DICTPATH="/usr/lib/cracklib_dict"
 
 alias ll='ls -lah --color=auto'
 alias ls='ls --color=auto'
