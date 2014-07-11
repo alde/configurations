@@ -5,7 +5,7 @@
 
 ;; color themes
 (add-to-list 'load-path "~/.emacs.d/colors")
-; (require 'color-theme)
+;(require 'color-theme)
 (require 'color-theme-wombat)
 (color-theme-wombat)
 
@@ -19,4 +19,5 @@
 
 (add-to-list 'load-path "~/.emacs.d/elpa/rainbow-delimiters-1.3.4")
 (require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 

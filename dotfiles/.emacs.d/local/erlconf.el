@@ -4,7 +4,7 @@
 (require 'erlang-start)
 
 ;; EDTS
-(add-to-list 'load-path "~/git/external/edts")
+(add-to-list 'load-path "~/.emacs.d/edts")
 (require 'edts-start)
 
 ;; Distel

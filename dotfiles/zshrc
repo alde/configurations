@@ -48,6 +48,8 @@ chpwd_functions=( ${chpwd_functions} chpwd_profiles )
 chpwd_profile_work
 
 
+e() { nohup emacsclient --alternate-editor="emacs" "$@" > /dev/null 2>&1 & }
+
 bindkey '\e[1~' beginning-of-line
 bindkey '\e[4~' end-of-line
 
@@ -140,6 +142,8 @@ alias cs='phpcs --standard=PEAR'
 alias yum='sudo yum -y'
 alias ta='tmux attach -t'
 alias tn='tmux new -s'
+alias make='make -j16 -s'
+alias ack='ack-grep'
 
 if [[ "$TERM" != emacs ]]; then
 [[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char

@@ -1,0 +1,6 @@
+[submodule "dotfiles/.emacs.d/edts"]
+	path = dotfiles/.emacs.d/edts
+	url = git://github.com/tjarvstrand/edts.git
+[submodule "dotfiles/.emacs.d/helm"]
+	path = dotfiles/.emacs.d/helm
+	url = https://github.com/emacs-helm/helm.git
