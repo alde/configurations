@@ -27,7 +27,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tronesque)))
- '(custom-safe-themes (quote ("ee6081af57dd389d9c94be45d49cf75d7d737c4a78970325165c7d8cb6eb9e34" "f0a99f53cbf7b004ba0c1760aa14fd70f2eabafe4e62a2b3cf5cabae8203113b" default)))
+ '(custom-safe-themes (quote ("65ae93029a583d69a3781b26044601e85e2d32be8f525988e196ba2cb644ce6a" "ee6081af57dd389d9c94be45d49cf75d7d737c4a78970325165c7d8cb6eb9e34" "f0a99f53cbf7b004ba0c1760aa14fd70f2eabafe4e62a2b3cf5cabae8203113b" default)))
  '(fci-rule-color "#383838"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
