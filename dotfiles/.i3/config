@@ -181,3 +181,6 @@ for_window [class="^Spotify$"] floating enable
 
 # nm-applet
 exec --no-startup-id nm-applet
+
+exec xautolock -time 5 -locker '~/bin/i3exit lock' &
+
