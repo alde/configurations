@@ -160,7 +160,7 @@ bar {
 }
 
 # lock screen
-bindsym Control+mod1+l exec i3lock
+bindsym Control+mod1+l exec i3exit lock
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
