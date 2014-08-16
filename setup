@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+WORKDIR = File.expand_path(File.dirname(File.dirname(__FILE__)))
+HOME = ENV['HOME']
+%x{ln -s #{WORKDIR}/.vim #{HOME}/.vim}
+Dir.entries("#{WORKDIR}/dotfiles").select {|f| !File.directory? f}.each do |f|
+	f.chomp!
+	%x{ln -s #{WORKDIR}/dotfiles/#{f} #{HOME}/#{f}}
+end
+Dir.entries("#{WORKDIR}/scripts").select {|f| !File.directory? f}.each do |f|
+	f.chomp!
+	%x{ln -s #{WORKDIR}/scripts/#{f} #{HOME}/bin/#{f}}
+end
