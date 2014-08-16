@@ -9,11 +9,11 @@ urxvt*allow_bold:           true
 
 !!
 ! XFT settings
-#include ".xdefaults/xft"
+#include ".xdefault_parts/xft"
 
 !!
 ! Scroll Settings
-#include ".xdefaults/scroll"
+#include ".xdefault_parts/scroll"
 
 URxvt*inheritPixmap:        false
 
@@ -33,28 +33,28 @@ urxvt*utmpInhibit:          false
 
 !!
 ! Fonts
-#include ".xdefaults/fonts"
+#include ".xdefault_parts/fonts"
 
 !!
 ! Perl Extensions
-#include ".xdefaults/perl_extensions"
+#include ".xdefault_parts/perl_extensions"
 
 !!
 ! Colors - Solarized Dark
-!#include ".xdefaults/solarized_dark"
+!#include ".xdefault_parts/solarized_dark"
 
 !!
 ! Colors - Solarized Light
-!#include ".xdefaults/solarized_light"
+!#include ".xdefault_parts/solarized_light"
 
 !!
 ! Colors - Monokai
-! #include ".xdefaults/monokai"
+! #include ".xdefault_parts/monokai"
 
 !!
 ! Colors - Monokai Two
-#include ".xdefaults/monokai_two"
+#include ".xdefault_parts/monokai_two"
 
 !!
 ! Colors - HLVN
-!#include ".xdefaults/hlvn"
+!#include ".xdefault_parts/hlvn"
