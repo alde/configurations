@@ -141,6 +141,7 @@ case "$(uname)" in
     *)
         alias ll='ls -lah --color=auto'
         alias ls='ls --color=auto'
+        alias ack='ack-grep'
         ;;
 esac
 
@@ -151,7 +152,13 @@ alias yum='sudo yum -y'
 alias ta='tmux attach -t'
 alias tn='tmux new -s'
 alias make='make -j16 -s'
-alias ack='ack-grep'
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
+alias be='bundle exec'
+
 
 if [[ "$TERM" != emacs ]]; then
 [[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char
@@ -181,5 +188,11 @@ if [[ "$TERM" != emacs ]]; then
 [[ "$terminfo[kend]" == "^[O"* ]] && bindkey -M emacs "${terminfo[kend]/O/[}" end-of-line
 fi
 
-PATH=$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.0.0/bin # Add RVM to PATH for scripting
+function swap()
+{
+    tmpfile=$(mktemp $(dirname "$1")/XXXXXX)
+    mv "$1" "$tmpfile" && mv "$2" "$1" &&  mv "$tmpfile" "$2"
+}
 
+export PATH=$HOME/git/orchid/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.0.0/bin # Add RVM to PATH for scripting
+source ~/.profile
