@@ -117,10 +117,8 @@ local cp="%{$fg[red]%} )%{$reset_color%}"
 local path_p="${op}%{$fg[cyan]%}%~${cp}"
 local username="%{$fg[green]%}%n%{$reset_color%}"
 local host="@%{$fg[yellow]%}%m${reset_color%}"
-PROMPT="%{$fg[red]%}╭─${path_p}%{$fg[red]%} ─ ${op}${username}${host}${cp}
-%{$fg[red]%}╰─${op}%T${cp}%{$fg[blue]%}»%{$reset_color%} "
-### Right prompt
-RPS1='%{$reset_color%}%F{red}[%F{yellow}${CHPWD_PROFILE}%F{red}] %{$reset_color%}${vcs_info_msg_0_}'
+PROMPT='%{$fg[red]%}╭─${op}%T${cp} %{$fg[red]%}${op}${username}${host}${cp} %{$reset_color%}${vcs_info_msg_0_}
+%{$fg[red]%}╰─${path_p}%{$fg[red]%} %{$fg[blue]%}»%{$reset_color%} '
 
 bindkey "^[[6~" end-of-history # Page up
 bindkey "^[[5~" insert-last-word # Page down
@@ -194,5 +192,5 @@ function swap()
     mv "$1" "$tmpfile" && mv "$2" "$1" &&  mv "$tmpfile" "$2"
 }
 
-export PATH=$HOME/git/orchid/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.0.0/bin # Add RVM to PATH for scripting
+export PATH=$HOME/git/esup/orchid/bin:$HOME/bin:$HOME/packer:/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.0.0/bin # Add RVM to PATH for scripting
 source ~/.profile
