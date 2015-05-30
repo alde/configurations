@@ -38,8 +38,8 @@ bindsym $mod+r exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # move workspace
-bindsym $mod+Left workspace prevonoutput
-bindsym $mod+Right workspace nextonoutput
+bindsym $mod+Left workspace prev
+bindsym $mod+Right workspace next
 
 # change focus
 bindsym $mod+h focus left
@@ -156,11 +156,23 @@ bindsym $mod+p mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    position top
+    status_command i3status -c ~/.i3/i3status.conf
+    colors {
+        # Whole color settings
+        background #000000
+        statusline #ffffff
+        separator  #666666
+        # Type             border  background font
+        focused_workspace  #008fff #007fff #ffffff
+        active_workspace   #333333 #5f676a #ffffff
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #aa0000 #990000 #ffffff
+    }
+    # i3bar position
 }
-
 # lock screen
-bindsym Control+mod1+l exec i3exit lock
+bindsym Control+$mod+l exec i3exit lock
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -181,6 +193,6 @@ for_window [class="^Spotify$"] floating enable
 
 # nm-applet
 exec --no-startup-id nm-applet
-
+exec --no-startup-id 'feh --bg-scale ~/Pictures/Jamie-Chung-In-Sin-City-A-Dame-To-Kill-For-Movie-Wallpapers.jpg'
 exec xautolock -time 5 -locker '~/bin/i3exit lock' &
 

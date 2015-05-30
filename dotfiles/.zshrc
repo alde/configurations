@@ -6,50 +6,6 @@ fi
 HISTSIZE=5000
 SAVEHIST=10000
 
-zstyle ':chpwd:profiles:/home/dybeck/git/work(|/|/*)'       profile work
-zstyle ':chpwd:profiles:/home/dybeck/git/private(|/|/*)'    profile private
-zstyle ':chpwd:profiles:/home/dybeck/git/external(|/|/*)'    profile private
-
-# configuration for profile 'private':
-chpwd_profile_private()
-{
-  [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-
-  export GIT_AUTHOR_EMAIL="r.dybeck@gmail.com"
-  export GIT_COMMITTER_EMAIL="r.dybeck@gmail.com"
-
-  print "chpwd(): Switching to profile: $profile ($GIT_AUTHOR_EMAIL)"
-}
-
-# configuration for profile 'work':
-chpwd_profile_work()
-{
-  [[ ${profile} == ${CHPWD_PROFILE} ]] && return 1
-
-  export GIT_AUTHOR_EMAIL="rickard.dybeck@klarna.com"
-  export GIT_COMMITTER_EMAIL="rickard.dybeck@klarna.com"
-
-  print "chpwd(): Switching to profile: $profile ($GIT_AUTHOR_EMAIL)"
-}
-
-CHPWD_PROFILE='work'
-function chpwd_profiles() {
-    local -x profile
-
-    zstyle -s ":chpwd:profiles:${PWD}" profile profile || profile='work'
-    if (( ${+functions[chpwd_profile_$profile]} )) ; then
-        chpwd_profile_${profile}
-    fi
-
-    CHPWD_PROFILE="${profile}"
-    return 0
-}
-chpwd_functions=( ${chpwd_functions} chpwd_profiles )
-chpwd_profile_work
-
-
-e() { nohup emacsclient --alternate-editor="emacs" "$@" > /dev/null 2>&1 & }
-
 bindkey '\e[1~' beginning-of-line
 bindkey '\e[4~' end-of-line
 
@@ -123,13 +79,6 @@ PROMPT='%{$fg[red]%}╭─${op}%T${cp} %{$fg[red]%}${op}${username}${host}${cp} 
 bindkey "^[[6~" end-of-history # Page up
 bindkey "^[[5~" insert-last-word # Page down
 
-export PATH=$HOME/bin:$PATH
-export UZBL_DOWNLOAD_DIR=$HOME/Downloads
-export GREP_OPTIONS='--color=auto'
-export LESS=-R
-export STATICU=rickard.dybeck
-export CRACKLIB_DICTPATH="/usr/lib/cracklib_dict"
-
 _myos="$(uname)"
 case "$(uname)" in
     Darwin)
@@ -139,14 +88,17 @@ case "$(uname)" in
     *)
         alias ll='ls -lah --color=auto'
         alias ls='ls --color=auto'
-        alias ack='ack-grep'
+        if hash ack-grep 2>/dev/null; then
+            alias ack='ack-grep'
+        fi
         ;;
 esac
 
+alias grep='grep --color=auto'
 alias diff='colordiff'
 alias s='sublime'
-alias cs='phpcs --standard=PEAR'
 alias yum='sudo yum -y'
+alias dnf='sudo dnf -y'
 alias ta='tmux attach -t'
 alias tn='tmux new -s'
 alias make='make -j16 -s'
@@ -157,40 +109,12 @@ alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 alias be='bundle exec'
 
-
-if [[ "$TERM" != emacs ]]; then
-[[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char
-[[ -z "$terminfo[khome]" ]] || bindkey -M emacs "$terminfo[khome]" beginning-of-line
-[[ -z "$terminfo[kend]" ]] || bindkey -M emacs "$terminfo[kend]" end-of-line
-[[ -z "$terminfo[kich1]" ]] || bindkey -M emacs "$terminfo[kich1]" overwrite-mode
-[[ -z "$terminfo[kdch1]" ]] || bindkey -M vicmd "$terminfo[kdch1]" vi-delete-char
-[[ -z "$terminfo[khome]" ]] || bindkey -M vicmd "$terminfo[khome]" vi-beginning-of-line
-[[ -z "$terminfo[kend]" ]] || bindkey -M vicmd "$terminfo[kend]" vi-end-of-line
-[[ -z "$terminfo[kich1]" ]] || bindkey -M vicmd "$terminfo[kich1]" overwrite-mode
-
-[[ -z "$terminfo[cuu1]" ]] || bindkey -M viins "$terminfo[cuu1]" vi-up-line-or-history
-[[ -z "$terminfo[cuf1]" ]] || bindkey -M viins "$terminfo[cuf1]" vi-forward-char
-[[ -z "$terminfo[kcuu1]" ]] || bindkey -M viins "$terminfo[kcuu1]" vi-up-line-or-history
-[[ -z "$terminfo[kcud1]" ]] || bindkey -M viins "$terminfo[kcud1]" vi-down-line-or-history
-[[ -z "$terminfo[kcuf1]" ]] || bindkey -M viins "$terminfo[kcuf1]" vi-forward-char
-[[ -z "$terminfo[kcub1]" ]] || bindkey -M viins "$terminfo[kcub1]" vi-backward-char
-
-# ncurses fogyatekos
-[[ "$terminfo[kcuu1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcuu1]/O/[}" vi-up-line-or-history
-[[ "$terminfo[kcud1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcud1]/O/[}" vi-down-line-or-history
-[[ "$terminfo[kcuf1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcuf1]/O/[}" vi-forward-char
-[[ "$terminfo[kcub1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcub1]/O/[}" vi-backward-char
-[[ "$terminfo[khome]" == "^[O"* ]] && bindkey -M viins "${terminfo[khome]/O/[}" beginning-of-line
-[[ "$terminfo[kend]" == "^[O"* ]] && bindkey -M viins "${terminfo[kend]/O/[}" end-of-line
-[[ "$terminfo[khome]" == "^[O"* ]] && bindkey -M emacs "${terminfo[khome]/O/[}" beginning-of-line
-[[ "$terminfo[kend]" == "^[O"* ]] && bindkey -M emacs "${terminfo[kend]/O/[}" end-of-line
-fi
-
 function swap()
 {
     tmpfile=$(mktemp $(dirname "$1")/XXXXXX)
     mv "$1" "$tmpfile" && mv "$2" "$1" &&  mv "$tmpfile" "$2"
 }
 
-export PATH=$HOME/git/esup/orchid/bin:$HOME/bin:$HOME/packer:/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/2.0.0/bin # Add RVM to PATH for scripting
+export LESS=-R
+export PATH=$HOME/git/esup/orchid/bin:$HOME/bin:$HOME/packer:/usr/local/bin:$PATH:$HOME/.gem/ruby/2.0.0/bin # Add RVM to PATH for scripting
 source ~/.profile
