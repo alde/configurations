@@ -144,7 +144,7 @@ function swap()
     tmpfile=$(mktemp $(dirname "$1")/XXXXXX)
     mv "$1" "$tmpfile" && mv "$2" "$1" &&  mv "$tmpfile" "$2"
 }
-export SCALA_HOME=/opt/scala-2.11.1
+export SCALA_HOME=/opt/scala-2.12.0-M1
 export LESS=-R
 export PATH=$HOME/git/esup/orchid/bin:$HOME/bin:$HOME/packer:/usr/local/bin:$PATH:$HOME/.gem/ruby/2.0.0/bin:/opt/play-2.0:$SCALA_HOME/bin # Add RVM to PATH for scripting
 source ~/.profile

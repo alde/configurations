@@ -193,6 +193,7 @@ for_window [class="^Spotify$"] floating enable
 
 # nm-applet
 exec --no-startup-id nm-applet
-exec --no-startup-id 'feh --bg-scale ~/Pictures/Jamie-Chung-In-Sin-City-A-Dame-To-Kill-For-Movie-Wallpapers.jpg'
+exec --no-startup-id nitrogen --restore
+
 exec xautolock -time 5 -locker '~/bin/i3exit lock' &
 

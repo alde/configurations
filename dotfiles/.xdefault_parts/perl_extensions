@@ -1,4 +1,5 @@
+URxvt.perl-lib:             /usr/lib/urxvt/perl/
 URxvt.perl-ext:             default,url-select
 URxvt.keysym.M-u:           perl:url-select:select_next
-URxvt.url-select.launcher:  /usr/bin/firefox -new-tab
+URxvt.url-select.launcher:  /usr/bin/google-chrome
 URxvt.url-select.underline: true
