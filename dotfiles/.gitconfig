@@ -1,6 +1,6 @@
 [user]
-	name = alde
-	email = r.dybeck@gmail.com
+	name = Rickard Dybeck
+	email = rickard.dybeck@klarna.com
 [color]
 	branch = auto
 	diff = auto
@@ -39,3 +39,5 @@
     stat = true
     tool = meld
     conflictstyle = diff3
+[branch]
+	autosetuprebase = always

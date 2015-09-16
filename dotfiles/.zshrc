@@ -101,7 +101,6 @@ alias yum='sudo yum -y'
 alias dnf='sudo dnf -y'
 alias ta='tmux attach -t'
 alias tn='tmux new -s'
-alias make='make -j16 -s'
 alias ..="cd .."
 alias ..2="cd ../.."
 alias ..3="cd ../../.."
@@ -146,5 +145,7 @@ function swap()
 }
 export SCALA_HOME=/opt/scala-2.12.0-M1
 export LESS=-R
-export PATH=$HOME/git/esup/orchid/bin:$HOME/bin:$HOME/packer:/usr/local/bin:$PATH:$HOME/.gem/ruby/2.0.0/bin:/opt/play-2.0:$SCALA_HOME/bin # Add RVM to PATH for scripting
+export PATH=$HOME/.gem/ruby/2.0.0/bin:HOME/git/esup/orchid/bin:$HOME/bin:$HOME/packer:/usr/local/bin:/opt/play-2.0:$SCALA_HOME/bin:$PATH # Add RVM to PATH for scripting
 source ~/.profile
+
+source ~/git/private/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

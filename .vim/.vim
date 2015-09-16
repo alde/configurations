@@ -1,0 +1,1 @@
+/home/rickard.dybeck/git/private/configurations/.vim

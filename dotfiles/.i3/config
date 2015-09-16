@@ -157,7 +157,8 @@ bindsym $mod+p mode "resize"
 # finds out, if available)
 bar {
     position top
-    status_command i3status -c ~/.i3/i3status.conf
+    status_command ~/bin/i3conky
+    # status_command i3status -c ~/.i3/i3status.conf
     colors {
         # Whole color settings
         background #000000
