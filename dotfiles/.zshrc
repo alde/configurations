@@ -151,5 +151,9 @@ export GOPATH=$HOME/git/gocode
 export PYTHONSTARTUP="$HOME/.pythonstartup.py"
 
 source ~/.profile
-source /usr/bin/aws_zsh_completer.sh
-source ~/git/private/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+test -f /usr/bin/aws_zsh_completer.sh && source /usr/bin/aws_zsh_completer.sh
+
+source $HOME/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/lib/jump.plugin.zsh
+

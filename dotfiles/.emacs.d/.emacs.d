@@ -1,1 +1,0 @@
-/home/rickard.dybeck/git/private/configurations/dotfiles/.emacs.d

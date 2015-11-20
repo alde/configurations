@@ -2,12 +2,21 @@
 
 WORKDIR = File.expand_path(File.dirname(File.dirname(__FILE__)))
 HOME = ENV['HOME']
-%x{ln -s #{WORKDIR}/.vim #{HOME}/.vim}
+
+%x{mkdir -p #{HOME}/bin}
+%x{mkdir -p #{HOME}/lib}
+
+%x{ln -s -f #{WORKDIR}/.vim #{HOME}/.vim}
 Dir.entries("#{WORKDIR}/dotfiles").select {|f| !File.directory? f}.each do |f|
 	f.chomp!
-	%x{ln -s #{WORKDIR}/dotfiles/#{f} #{HOME}/#{f}}
+	%x{ln -s -f #{WORKDIR}/dotfiles/#{f} #{HOME}/#{f}}
 end
 Dir.entries("#{WORKDIR}/scripts").select {|f| !File.directory? f}.each do |f|
 	f.chomp!
-	%x{ln -s #{WORKDIR}/scripts/#{f} #{HOME}/bin/#{f}}
+	%x{ln -s -f #{WORKDIR}/scripts/#{f} #{HOME}/bin/#{f}}
 end
+Dir.entries("#{WORKDIR}/libs/").reject {|f| File.directory? f}.each do |f|
+  f.chomp!
+  %x{ln -s -f #{WORKDIR}/libs/#{f} #{HOME}/lib/#{f}}
+end
+%x{ln -s -f #{WORKDIR}/libs/zsh-syntax-highlighting #{HOME}/lib/}
