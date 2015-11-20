@@ -107,7 +107,7 @@ alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 alias be='bundle exec'
-
+alias j=jump
 
 if [[ "$TERM" != emacs ]]; then
         [[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char
