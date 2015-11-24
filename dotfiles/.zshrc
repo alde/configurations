@@ -145,9 +145,9 @@ function swap()
 }
 export SCALA_HOME=/opt/scala-2.12.0-M1
 export LESS=-R
-export PATH=$HOME/.gem/ruby/2.0.0/bin:HOME/git/esup/orchid/bin:$HOME/bin:$HOME/packer:/usr/local/bin:/opt/play-2.0:$SCALA_HOME/bin:$PATH # Add RVM to PATH for scripting
-export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/git/gocode
+export PATH=$HOME/.gem/ruby/2.0.0/bin:HOME/git/esup/orchid/bin:$HOME/bin:$HOME/packer:/usr/local/bin:/opt/play-2.0:$SCALA_HOME/bin:$PATH # Add RVM to PATH for scripting
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PYTHONSTARTUP="$HOME/.pythonstartup.py"
 
 source ~/.profile
