@@ -48,7 +48,8 @@ zstyle ':completion:*:*:git:*' user-commands fixup:'Create a fixup commit'
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-autoload -U compinit promptinit
+autoload -Uz compinit && compinit -i
+autoload -U promptinit
 autoload -U colors
 autoload -Uz vcs_info
 compinit
@@ -143,6 +144,10 @@ function swap()
     tmpfile=$(mktemp $(dirname "$1")/XXXXXX)
     mv "$1" "$tmpfile" && mv "$2" "$1" &&  mv "$tmpfile" "$2"
 }
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 export SCALA_HOME=/opt/scala-2.12.0-M1
 export LESS=-R
 export GOPATH=$HOME/git/gocode
@@ -154,6 +159,7 @@ export TERM=screen-256color
 source ~/.profile
 
 test -f /usr/bin/aws_zsh_completer.sh && source /usr/bin/aws_zsh_completer.sh
+test -f /usr/local/bin/aws_zsh_completer.sh && source /usr/local/bin/aws_zsh_completer.sh
 
 source $HOME/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/lib/jump.plugin.zsh

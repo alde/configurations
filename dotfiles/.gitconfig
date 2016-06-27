@@ -19,7 +19,14 @@
   ci = commit
   br = branch
   co = checkout
-  df = diff --word-diff
+  df = diff \
+                --minimal \
+                --word-diff=color \
+                --word-diff-regex='([0-9@A-Za-z]+|[^0-9@A-Za-z]+)'
+  lp = log \
+                -p \
+                --word-diff=color \
+                --word-diff-regex='([0-9@A-Za-z]+|[^0-9@A-Za-z]+)'
   lg = log --graph --pretty=\"format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset\"
   ds = diff --staged
   su = submodule update --init --recursive

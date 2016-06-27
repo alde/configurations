@@ -57,4 +57,4 @@ urxvt*utmpInhibit:          false
 
 !!
 ! Colors - HLVN
-!#include ".xdefault_parts/hlvn"
+! #include ".xdefault_parts/hlvn"
