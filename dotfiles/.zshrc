@@ -97,7 +97,7 @@ esac
 
 alias grep='grep --color=auto'
 alias diff='colordiff'
-alias s='sublime'
+alias s='reattach-to-user-namespace sublime'
 alias yum='sudo yum -y'
 alias dnf='sudo dnf -y'
 alias ta='tmux attach -t'
@@ -145,6 +145,14 @@ function swap()
     mv "$1" "$tmpfile" && mv "$2" "$1" &&  mv "$tmpfile" "$2"
 }
 
+function exists { which $1 &> /dev/null }
+
+if exists ipython; then
+        alias py=ipython
+else
+        alias py=python3
+fi
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -164,3 +172,5 @@ test -f /usr/local/bin/aws_zsh_completer.sh && source /usr/local/bin/aws_zsh_com
 source $HOME/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/lib/jump.plugin.zsh
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh/completion $fpath)
