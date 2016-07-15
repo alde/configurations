@@ -58,12 +58,12 @@ promptinit
 
 autoload colors zsh/terminfo
 if [[ "$terminfo[colors]" -ge 8 ]]; then
-    colors
+        colors
 fi
 for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
-    eval PR_$color='{%$terminfo[bold]$fg[${(L)color}]%}'
-    eval PR_LIGHT_$color='{%$fg[${(L)color}]%}'
-    (( count = $count + 1 ))
+        eval PR_$color='{%$terminfo[bold]$fg[${(L)color}]%}'
+        eval PR_LIGHT_$color='{%$fg[${(L)color}]%}'
+        (( count = $count + 1 ))
 done
 PR_NO_COLOR="{%$terminfo[sgr0]%}"
 
@@ -77,22 +77,24 @@ local host="@%{$fg[yellow]%}%m${reset_color%}"
 PROMPT='%{$fg[red]%}╭─${op}%T${cp} %{$fg[red]%}${op}${username}${host}${cp} %{$reset_color%}${vcs_info_msg_0_}
 %{$fg[red]%}╰─${path_p}%{$fg[red]%} %{$fg[blue]%}»%{$reset_color%} '
 
+RPROMPT='$(battery_charge)'
+
 bindkey "^[[6~" end-of-history # Page up
 bindkey "^[[5~" insert-last-word # Page down
 
 _myos="$(uname)"
 case "$(uname)" in
-    Darwin)
-        alias ll='ls -lahG'
-        alias ls='ls -G'
-        ;;
-    *)
-        alias ll='ls -lah --color=auto'
-        alias ls='ls --color=auto'
-        if hash ack-grep 2>/dev/null; then
-            alias ack='ack-grep'
-        fi
-        ;;
+        Darwin)
+                alias ll='ls -lahG'
+                alias ls='ls -G'
+                ;;
+        *)
+                alias ll='ls -lah --color=auto'
+                alias ls='ls --color=auto'
+                if hash ack-grep 2>/dev/null; then
+                        alias ack='ack-grep'
+                fi
+                ;;
 esac
 
 alias grep='grep --color=auto'
@@ -159,7 +161,7 @@ export LC_ALL=en_US.UTF-8
 export SCALA_HOME=/opt/scala-2.12.0-M1
 export LESS=-R
 export GOPATH=$HOME/git/gocode
-export PATH=$HOME/.gem/ruby/2.0.0/bin:HOME/git/esup/orchid/bin:$HOME/bin:$HOME/packer:/usr/local/bin:/opt/play-2.0:$SCALA_HOME/bin:$PATH # Add RVM to PATH for scripting
+export PATH=$HOME/.gem/ruby/2.0.0/bin:$HOME/bin:$HOME/packer:/usr/local/bin:/opt/play-2.0:$SCALA_HOME/bin:$PATH # Add RVM to PATH for scripting
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PYTHONSTARTUP="$HOME/.pythonstartup.py"
 export TERM=screen-256color
