@@ -34,9 +34,6 @@ zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-#eval "$(dircolors -b)"
-#zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-#zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
 zstyle ':completion:*' menu select=long
@@ -77,8 +74,6 @@ local host="@%{$fg[yellow]%}%m${reset_color%}"
 PROMPT='%{$fg[red]%}╭─${op}%T${cp} %{$fg[red]%}${op}${username}${host}${cp} %{$reset_color%}${vcs_info_msg_0_}
 %{$fg[red]%}╰─${path_p}%{$fg[red]%} %{$fg[blue]%}»%{$reset_color%} '
 
-RPROMPT='$(battery_charge)'
-
 bindkey "^[[6~" end-of-history # Page up
 bindkey "^[[5~" insert-last-word # Page down
 
@@ -112,41 +107,6 @@ alias ..5="cd ../../../../.."
 alias be='bundle exec'
 alias j=jump
 
-if [[ "$TERM" != emacs ]]; then
-        [[ -z "$terminfo[kdch1]" ]] || bindkey -M emacs "$terminfo[kdch1]" delete-char
-        [[ -z "$terminfo[khome]" ]] || bindkey -M emacs "$terminfo[khome]" beginning-of-line
-        [[ -z "$terminfo[kend]" ]] || bindkey -M emacs "$terminfo[kend]" end-of-line
-        [[ -z "$terminfo[kich1]" ]] || bindkey -M emacs "$terminfo[kich1]" overwrite-mode
-        [[ -z "$terminfo[kdch1]" ]] || bindkey -M vicmd "$terminfo[kdch1]" vi-delete-char
-        [[ -z "$terminfo[khome]" ]] || bindkey -M vicmd "$terminfo[khome]" vi-beginning-of-line
-        [[ -z "$terminfo[kend]" ]] || bindkey -M vicmd "$terminfo[kend]" vi-end-of-line
-        [[ -z "$terminfo[kich1]" ]] || bindkey -M vicmd "$terminfo[kich1]" overwrite-mode
-
-        [[ -z "$terminfo[cuu1]" ]] || bindkey -M viins "$terminfo[cuu1]" vi-up-line-or-history
-        [[ -z "$terminfo[cuf1]" ]] || bindkey -M viins "$terminfo[cuf1]" vi-forward-char
-        [[ -z "$terminfo[kcuu1]" ]] || bindkey -M viins "$terminfo[kcuu1]" vi-up-line-or-history
-        [[ -z "$terminfo[kcud1]" ]] || bindkey -M viins "$terminfo[kcud1]" vi-down-line-or-history
-        [[ -z "$terminfo[kcuf1]" ]] || bindkey -M viins "$terminfo[kcuf1]" vi-forward-char
-        [[ -z "$terminfo[kcub1]" ]] || bindkey -M viins "$terminfo[kcub1]" vi-backward-char
-
-        # ncurses fogyatekos
-        [[ "$terminfo[kcuu1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcuu1]/O/[}" vi-up-line-or-history
-        [[ "$terminfo[kcud1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcud1]/O/[}" vi-down-line-or-history
-        [[ "$terminfo[kcuf1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcuf1]/O/[}" vi-forward-char
-        [[ "$terminfo[kcub1]" == "^[O"* ]] && bindkey -M viins "${terminfo[kcub1]/O/[}" vi-backward-char
-        [[ "$terminfo[khome]" == "^[O"* ]] && bindkey -M viins "${terminfo[khome]/O/[}" beginning-of-line
-        [[ "$terminfo[kend]" == "^[O"* ]] && bindkey -M viins "${terminfo[kend]/O/[}" end-of-line
-        [[ "$terminfo[khome]" == "^[O"* ]] && bindkey -M emacs "${terminfo[khome]/O/[}" beginning-of-line
-        [[ "$terminfo[kend]" == "^[O"* ]] && bindkey -M emacs "${terminfo[kend]/O/[}" end-of-line
-fi
-
-
-function swap()
-{
-    tmpfile=$(mktemp $(dirname "$1")/XXXXXX)
-    mv "$1" "$tmpfile" && mv "$2" "$1" &&  mv "$tmpfile" "$2"
-}
-
 function exists { which $1 &> /dev/null }
 
 if exists ipython; then
@@ -161,9 +121,8 @@ export LC_ALL=en_US.UTF-8
 export SCALA_HOME=/opt/scala-2.12.0-M1
 export LESS=-R
 export GOPATH=$HOME/git/gocode
-export PATH=$HOME/.gem/ruby/2.0.0/bin:$HOME/bin:$HOME/packer:/usr/local/bin:/opt/play-2.0:$SCALA_HOME/bin:$PATH # Add RVM to PATH for scripting
+export PATH=$HOME/.gem/ruby/2.0.0/bin:$HOME/bin:/usr/local/bin::$SCALA_HOME/bin:$PATH
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export PYTHONSTARTUP="$HOME/.pythonstartup.py"
 export TERM=screen-256color
 
 source ~/.profile
