@@ -3,6 +3,7 @@ filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -18,7 +19,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'luochen1990/rainbow'
-
+Plugin 'slim-template/vim-slim.git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -40,7 +41,8 @@ autocmd FileType c,cpp,php,ruby,py,html,twig,java autocmd BufWritePre <buffer> :
 nnoremap <CR> :noh<CR><CR>
 
 " Autoformat file on save
-au BufWrite * :Autoformat
+au BufWrite *.py :Autoformat
+au BufWrite *.rb :Autoformat
 
 " Keymaps
 let mapleader=";"
