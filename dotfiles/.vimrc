@@ -20,18 +20,30 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'luochen1990/rainbow'
 Plugin 'slim-template/vim-slim.git'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'cohlin/vim-colorschemes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Tabs and Colors
-" color scheme of the moment:
+" color scheme of the moment: 'py-darcula'
 syntax on
-colorscheme desert
+let g:airline_theme = "darcula"
+colorscheme py-darcula
+
 let g:rainbow_active = 1
 set et
 set tabstop=4
 set colorcolumn=80
+
+" Misc
+set number
+set hidden
 set backspace=indent,eol,start
 
 " Setup Extra whitespace highlighting
@@ -43,6 +55,7 @@ nnoremap <CR> :noh<CR><CR>
 " Autoformat file on save
 au BufWrite *.py :Autoformat
 au BufWrite *.rb :Autoformat
+au BufWritePre * StripWhitespace
 
 " Keymaps
 let mapleader=";"
@@ -53,6 +66,8 @@ nnoremap <leader>s <C-W><C-J>
 nnoremap <leader>n <C-W><C-K>
 nnoremap <leader>r <C-W><C-L>
 nnoremap <leader>l <C-W><C-H>
+
+map <leader><F5> :source ~/.vimrc<CR>
 
 
 " Go programming
