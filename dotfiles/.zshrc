@@ -143,6 +143,11 @@ else
         alias py=python3
 fi
 
+if exists pygmentize; then
+        alias kat='pygmentize -g'
+fi
+
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
