@@ -15,8 +15,3 @@ Dir.entries("#{WORKDIR}/scripts").select {|f| !File.directory? f}.each do |f|
 	f.chomp!
 	%x{ln -s -f #{WORKDIR}/scripts/#{f} #{HOME}/bin/#{f}}
 end
-Dir.entries("#{WORKDIR}/libs/").reject {|f| File.directory? f}.each do |f|
-  f.chomp!
-  %x{ln -s -f #{WORKDIR}/libs/#{f} #{HOME}/lib/#{f}}
-end
-%x{ln -s -f #{WORKDIR}/libs/zsh-syntax-highlighting #{HOME}/lib/}

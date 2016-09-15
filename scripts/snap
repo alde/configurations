@@ -1,0 +1,12 @@
+#!/bin/bash
+
+export VERSION_CONTROL=numbered
+
+for f; do
+    if [ -L $f  ]; then
+    cp -a $(readlink $f) ${f}.snap  && \
+    mv ${f} ${f}.oldlink            && \
+    mv ${f}.snap ${f}               && \
+    rm ${f}.oldlink
+    fi
+done

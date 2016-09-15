@@ -1,0 +1,112 @@
+#!/bin/sh
+
+usage() {
+    cat <<EOF
+Usage: $0 [OPTION]... SOURCE... DEST
+ or:   $0 [OPTION]... SOURCE DEST
+Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY, leaving symbolic links.
+
+  -v   verbose, two passes -v to mv and ln
+  -q   quiet, also passed to mv and ln
+
+EOF
+
+}
+
+info() {
+    if [ $verbose -gt 0  ]; then
+    echo "$@"
+    fi
+
+}
+
+export POSIXLY_CORRECT=1
+export GETOPT_COMPATIBLE=1
+
+TEMP=$(getopt fhvq "$@")
+
+if [ $? != 0  ] ; then echo "Failed to parse arguments" >&2 ; exit 5 ; fi
+
+eval set -- "$TEMP"
+
+verbose=0
+
+while true ; do
+    case $1 in
+    -v|--verbose)
+        verbose="$(( $verbose + 1 ))"
+        ;;
+    -q|--quiet)
+        verbose="$(( $verbose - 1 ))"
+        ;;
+    -f|--force)
+        force=f
+        ;;
+    -h|--help)
+        usage
+        exit 0
+        ;;
+    --)
+        shift
+        break
+        ;;
+    *)
+        break
+        ;;
+    esac
+    shift
+done
+
+if [ $verbose -gt 1  ]; then
+    passflags="-v$force"
+elif [ $verbose -lt 0  ]; then
+    passflags="-q$force"
+else
+    passflags="$force"
+fi
+
+if [ $# -lt 2  ]; then
+    usage
+    exit 5
+fi
+
+eval "last=\${$#}"
+
+if [ -e "$last"  ] ; then
+    if ! [ -d "$last"  ] ; then
+    echo "$0: will not replace existing destination\n" 1>&2
+    exit 5
+    else
+    kind=dir
+    fi
+else
+    if [ $# -gt 2  ] ; then
+    echo "$0: cannot move-link multiple sources to the same name\n" 1>&2
+    usage
+    exit 5
+    else
+    kind=file
+    fi
+fi
+
+
+
+while [ $# -gt 1  ]; do
+    dst="$(cd "$(dirname "$last")"; pwd)/$(basename "$last")"
+
+    if [ $kind = dir  ] ; then
+    bar="${dst}/${1##*/}"
+    else
+    bar="${dst}"
+    fi
+
+    info "move: $1 -> $bar"
+    mv -i $passflags "$1" "$bar"
+    if [ $? -gt 0  ]; then break; fi
+
+    info "link: $1 <- $bar"
+    ln -s $passflags "$bar" "$1"
+    if [ $? -gt 0  ]; then break; fi
+
+    shift
+done
