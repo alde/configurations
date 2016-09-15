@@ -1,2 +1,5 @@
 *~
 *.xref
+.vim/bundle/
+dotfiles/.zsh/.cache/
+git_hooks/
