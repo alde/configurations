@@ -1,3 +1,11 @@
+HISTFILE=~/.local/share/zsh/histfile
+if  [[ ! -e $HISTFILE  ]]; then
+        mkdir -p ~/.local/share/zsh
+        touch ~/.local/share/zsh/histfile
+fi
+HISTSIZE=5000
+SAVEHIST=10000
+
 source ~/.zsh/antigen.zsh
 
 antigen use oh-my-zsh
@@ -5,12 +13,25 @@ antigen bundle git
 antigen bundle pip
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle jump
 
 antigen theme https://github.com/halfo/lambda-mod-zsh-theme/ lambda-mod
 
 antigen apply
+
+
+setopt append_history
+setopt inc_append_history
+setopt extended_history
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+setopt hist_ignore_space
+setopt hist_no_store
+setopt hist_no_functions
+setopt no_hist_beep
+setopt hist_save_no_dups
+setopt no_share_history
 
 bindkey "^[[6~" end-of-history # Page up
 bindkey "^[[5~" insert-last-word # Page down
@@ -27,5 +48,3 @@ export TERM=screen-256color
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-test -f /usr/bin/aws_zsh_completer.sh && source /usr/bin/aws_zsh_completer.sh
-test -f /usr/local/bin/aws_zsh_completer.sh && source /usr/local/bin/aws_zsh_completer.sh
