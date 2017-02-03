@@ -6,6 +6,7 @@ HOME = ENV['HOME']
 %x{mkdir -p #{HOME}/bin}
 %x{mkdir -p #{HOME}/lib}
 
+%x{gem install ruby-progressbar}
 unless File.exist?("#{HOME}/.vim")
   %x{ln -s -f #{WORKDIR}/.vim #{HOME}/.vim}
 end

@@ -1,0 +1,90 @@
+#!/usr/bin/env ruby
+
+require 'ruby-progressbar'
+
+class Unpacker
+  SOURCE_DIR = '/media/files/Download/'
+  TARGET_DIR = '/media/files/Nytt/'
+
+  def unpack!
+    finished = Dir.glob("#{SOURCE_DIR}*.finished")
+
+    if finished.empty?
+      $stderr.puts "No files to unpack"
+    end
+
+    finished.each do |f|
+      File.delete(f) if unpack(f) == :success
+    end
+  end
+
+  private
+    def unpack(finished)
+      entries, count, type = get_entry(finished)
+
+      return if entries.nil? || entries.empty?
+      if entries.is_a? ::Array
+        entries.map {|e| e.gsub! /\s/, '\ '}
+      else
+        entries.gsub! /\s/, '\ '
+      end
+
+      return process(entries, count) if type == :rar
+      copy(entries) if [:mkv, :mp4, :avi].include?(type)
+    end
+
+    def get_entry(finished)
+      files = Dir.glob("#{finished}/*.rar")
+      return [files.first, Dir.glob("#{finished}/*.r*").count, :rar] if files.length == 1
+
+      files = Dir.glob("#{finished}/*.part*.rar").sort
+      return [files.first, files.count, :rar] unless files.empty?
+
+      files = Dir.glob("#{finished}/**/*.mkv").reject { |r| r.downcase =~ /sample/ }.sort
+      return [files, 1, :mkv] unless files.empty?
+
+      files = Dir.glob("#{finished}/**/*.mp4").reject { |r| r.downcase =~ /sample/ }.sort
+      return [files, 1, :mp4] unless files.empty?
+
+
+      files = Dir.glob("#{finished}/**/*.avi").reject { |r| r.downcase =~ /sample/ }.sort
+      return [files, 1, :avi] unless files.empty?
+
+      nil
+    end
+
+    def copy(entries)
+      timestamp = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+      entries.each do |entry|
+        puts "[#{timestamp}] copying #{entry}"
+        system("cp #{entry} #{TARGET_DIR}") == true
+        f = File.join(TARGET_DIR, entry.split('/').last)
+        system("chmod 0644 #{f}")
+      end
+      :success
+    end
+
+    def process(archive, count)
+      filename = clean(archive)
+      timestamp = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+      status = :failure
+      progressbar = ProgressBar.create( title:  "[#{timestamp}] #{filename}",
+                                        format: '%t |%B| %p%% %e',
+                                        total:  count,
+                                        length: 150
+                                      )
+      IO.popen("rar x #{archive} #{TARGET_DIR}") do |o|
+        o.each do |l|
+          progressbar.increment if l =~ /^Extracting from/
+          status = :success if l =~ /^All OK/
+        end
+      end
+      status
+    end
+
+    def clean(archive)
+      archive.gsub(SOURCE_DIR, '').gsub(/\.finished\/.+$/, '')
+    end
+end
+
+Unpacker.new.unpack!
