@@ -25,6 +25,8 @@ alias ..5="cd ../../../../.."
 alias be='bundle exec'
 alias j=jump
 
+eval $(thefuck --alias)
+
 # _myos="$(uname)"
 # case "$(uname)" in
 #         Darwin)
