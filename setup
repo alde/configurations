@@ -6,12 +6,19 @@ HOME = ENV['HOME']
 %x{mkdir -p #{HOME}/bin}
 %x{mkdir -p #{HOME}/lib}
 
-%x{ln -s -f #{WORKDIR}/.vim #{HOME}/.vim}
+unless File.exist?("#{HOME}/.vim")
+  %x{ln -s -f #{WORKDIR}/.vim #{HOME}/.vim}
+end
+
 Dir.entries("#{WORKDIR}/dotfiles").select {|f| !File.directory? f}.each do |f|
 	f.chomp!
-	%x{ln -s -f #{WORKDIR}/dotfiles/#{f} #{HOME}/#{f}}
+  unless File.exist?("#{HOME}/#{f}")
+	  %x{ln -s -f #{WORKDIR}/dotfiles/#{f} #{HOME}/#{f}}
+  end
 end
 Dir.entries("#{WORKDIR}/scripts").select {|f| !File.directory? f}.each do |f|
 	f.chomp!
-	%x{ln -s -f #{WORKDIR}/scripts/#{f} #{HOME}/bin/#{f}}
+  unless File.exist?("#{HOME}/bin/#{f}")
+	  %x{ln -s -f #{WORKDIR}/scripts/#{f} #{HOME}/bin/#{f}}
+  end
 end
