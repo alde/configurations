@@ -1,5 +1,7 @@
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.matcher.rend.0: Uline Bold fg5
+
 URxvt.perl-lib:             /usr/lib/urxvt/perl/
-URxvt.perl-ext:             default,url-select
-URxvt.keysym.M-u:           perl:url-select:select_next
-URxvt.url-select.launcher:  /usr/bin/google-chrome
-URxvt.url-select.underline: true

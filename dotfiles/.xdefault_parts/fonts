@@ -1,3 +1,2 @@
-urxvt*font:                 xft:SourceCode Pro:pixelsize=14
-urxvt*boldFont:             xft:SourceCode Pro:pixelsize=14
-
+urxvt*font:                 xft:SourceCode Pro:pixelsize=28;antialias:True
+urxvt*boldFont:             xft:SourceCode Pro:pixelsize=28:bold;antialias:True

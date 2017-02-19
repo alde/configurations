@@ -5,9 +5,6 @@
 
 ;; color themes
 (add-to-list 'load-path "~/.emacs.d/colors")
-;(require 'color-theme)
-(require 'color-theme-wombat)
-(color-theme-wombat)
 
 ;; not sure this one is needed
 (set-face-foreground 'minibuffer-prompt "#66D9EF")
