@@ -16,10 +16,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle jump
 antigen bundle emacs
 
-antigen theme https://github.com/halfo/lambda-mod-zsh-theme/ lambda-mod
-
 antigen apply
 
+antigen theme https://gist.github.com/xfanwu/18fd7c24360c68bab884 xxf
 
 setopt append_history
 setopt inc_append_history
@@ -39,15 +38,15 @@ bindkey "^[[6~" end-of-history # Page up
 bindkey "^[[5~" insert-last-word # Page down
 
 source ~/.zsh/alias.zsh
+source ~/.zsh/rainbow.zsh
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
 export LESS=-R
 export GOPATH=$HOME/git/gocode
 export PATH=$HOME/.gem/ruby/2.0.0/bin:$HOME/bin:/usr/local/bin:$PATH:$GOPATH/bin:$HOME/.rvm/bin
-export TERM=xterm
-# screen-256color
+export TERM=screen-256color
+export REQUESTS_CA_BUNDLE=/usr/local/etc/openssl/cert.pem
+
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-

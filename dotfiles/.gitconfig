@@ -37,6 +37,7 @@
 	editor = vim
 	whitespace = trailing-space,space-before-tab
 	excludesfile = /home/dybeck/.gitignore_global
+	pager = less -F -X
 [rebase]
 	autosquash = true
 [advice]
