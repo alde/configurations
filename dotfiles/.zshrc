@@ -18,7 +18,8 @@ antigen bundle emacs
 
 antigen apply
 
-antigen theme https://gist.github.com/xfanwu/18fd7c24360c68bab884 xxf
+antigen theme https://gist.github.com/alde/cd137ce887d81505f574706850164de1 alde
+
 
 setopt append_history
 setopt inc_append_history
