@@ -40,15 +40,21 @@ class Unpacker
       files = Dir.glob("#{finished}/*.part*.rar").sort
       return [files.first, files.count, :rar] unless files.empty?
 
-      files = Dir.glob("#{finished}/**/*.mkv").reject { |r| r.downcase =~ /sample/ }.sort
-      return [files, 1, :mkv] unless files.empty?
+      [:mkv, :mp4, :avi].each do |type|
+        files = Dir.glob("#{finished}/**/*.#{type}").reject {|r| r.downcase =~ /sample/}.sort
+        return [files, 1, type] unless files.empty?
+      end
+      # files = Dir.glob("#{finished}/**/*.mkv").reject { |r| r.downcase =~ /sample/ }.sort
+      # return [files, 1, :mkv] unless files.empty?
 
-      files = Dir.glob("#{finished}/**/*.mp4").reject { |r| r.downcase =~ /sample/ }.sort
-      return [files, 1, :mp4] unless files.empty?
+      # files = Dir.glob("#{finished}/**/*.mp4").reject { |r| r.downcase =~ /sample/ }.sort
+      # return [files, 1, :mp4] unless files.empty?
 
+      # files = Dir.glob("#{finished}/**/*.avi").reject { |r| r.downcase =~ /sample/ }.sort
+      # return [files, 1, :avi] unless files.empty?
 
-      files = Dir.glob("#{finished}/**/*.avi").reject { |r| r.downcase =~ /sample/ }.sort
-      return [files, 1, :avi] unless files.empty?
+      files = Dir.glob(finished.gsub('.finished', ''))
+      return [files, 1, files.first.split('.').last.to_sym] unless files.empty?
 
       nil
     end
