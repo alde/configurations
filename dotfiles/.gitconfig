@@ -31,6 +31,7 @@
   ds = diff --staged
   su = submodule update --init --recursive
   fix = commit --amend --no-edit
+  up = pull --rebase --autostash
 [push]
 	default = current
 [core]

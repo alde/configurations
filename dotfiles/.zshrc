@@ -45,9 +45,11 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LESS=-R
 export GOPATH=$HOME/git/gocode
-export PATH=$HOME/.gem/ruby/2.0.0/bin:$HOME/bin:/usr/local/bin:$PATH:$GOPATH/bin:$HOME/.rvm/bin
-export TERM=screen-256color
+export PATH=$HOME/.gem/ruby/2.0.0/bin:$HOME/bin:/usr/local/bin:$PATH:$GOPATH/bin:$HOME/.rvm/bin:/usr/local/go/bin
+export TERM=xterm-256color
 export REQUESTS_CA_BUNDLE=/usr/local/etc/openssl/cert.pem
+export PATH=$PATH:$HOME/.minimesos/bin
+
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

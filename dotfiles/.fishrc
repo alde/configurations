@@ -1,0 +1,39 @@
+
+function _prepend_path -d "Prepend the given dir to PATH if it exists and is not already in it"
+    if test -d $argv[1]
+        if not contains $argv[1] $PATH
+            set -gx PATH "$argv[1]" $PATH
+        end
+    end
+end
+
+if type ipython ^ /dev/null > /dev/null
+    alias py ipython
+else
+    alias py python3
+end
+
+if type pygmentize ^ /dev/null > /dev/null
+    alias kat="pygmentize -g"
+end
+
+if type colordiff ^ /dev/null > /dev/null
+  alias diff colordiff
+end
+
+alias grep="grep --color=auto"
+alias ta="tmux attach -t"
+alias tn="tmux new -s"
+alias be="bundle exec"
+alias j jump
+
+export CHROME_BIN=(which chromium-browser)
+
+## Set up PATH
+_prepend_path $HOME/.cargo/bin
+_prepend_path $HOME/.minimesos/bin
+_prepend_path /usr/local/go/bin
+_prepend_path /usr/local/bin
+_prepend_path $HOME/git/gocode/bin
+_prepend_path $HOME/bin
+_prepend_path /opt/idea/bin
