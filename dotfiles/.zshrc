@@ -40,6 +40,7 @@ bindkey "^[[5~" insert-last-word # Page down
 
 source ~/.zsh/alias.zsh
 source ~/.zsh/rainbow.zsh
+source /opt/google-cloud-sdk/path.zsh.inc
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -53,3 +54,12 @@ export PATH=$PATH:$HOME/.minimesos/bin
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+if command -v hub 1>/dev/null 2>&1; then
+  eval "$(hub alias -s)"
+fi
+
+

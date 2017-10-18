@@ -6,8 +6,6 @@
 	diff = auto
 	interactive = auto
 	status = auto
-[jira]
-    user = rickard.dybeck
 [giggle]
 	main-window-maximized = false
 	main-window-geometry = 358x949+720+18
@@ -32,6 +30,7 @@
   su = submodule update --init --recursive
   fix = commit --amend --no-edit
   up = pull --rebase --autostash
+  pr = pull-request -o
 [push]
 	default = current
 [core]
@@ -51,3 +50,5 @@
     conflictstyle = diff3
 [branch]
 	autosetuprebase = always
+[hub]
+	host = ghe.spotify.net
