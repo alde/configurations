@@ -4,3 +4,6 @@
 [submodule "dotfiles/.emacs.d/helm"]
 	path = dotfiles/.emacs.d/helm
 	url = https://github.com/emacs-helm/helm.git
+[submodule "dotfiles/.zsh/powerlevel9k"]
+	path = dotfiles/.zsh/powerlevel9k
+	url = https://github.com/bhilburn/powerlevel9k.git
