@@ -1,24 +1,20 @@
-HISTFILE=~/.local/share/zsh/histfile
+HISTFILE=${HOME}/.local/share/zsh/histfile
 if  [[ ! -e $HISTFILE  ]]; then
-        mkdir -p ~/.local/share/zsh
-        touch ~/.local/share/zsh/histfile
+        mkdir -p ${HOME}/.local/share/zsh
+        touch ${HOME}/.local/share/zsh/histfile
 fi
 HISTSIZE=5000
 SAVEHIST=10000
 
-source ~/.zsh/antigen.zsh
+source ${HOME}/.zsh/antigen.zsh
 
 antigen use oh-my-zsh
-# antigen bundle git
-# antigen bundle pip
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle jump
 antigen apply
 
-antigen theme https://gist.github.com/alde/a52a6d060e9a880336f0a9b2f89742ee materialshell
-
-fpath=(~/.zsh/completion $fpath)
+fpath=(${HOME}/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
 setopt append_history
@@ -38,16 +34,14 @@ setopt no_share_history
 bindkey "^[[6~" end-of-history # Page up
 bindkey "^[[5~" insert-last-word # Page down
 
-source ~/.zsh/alias.zsh
-source ~/.zsh/rainbow.zsh
-source ~/.zsh/z.zsh
+source ${HOME}/.zsh/z.zsh
 
 export PYENV_ROOT="$HOME/.pyenv"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LESS=-R
 export GOPATH=$HOME/git/gocode
-export PATH=$HOME/.gem/ruby/2.0.0/bin:$HOME/bin:/usr/local/bin:$PATH:$GOPATH/bin:$HOME/.rvm/bin:/usr/local/go/bin
+export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:/usr/local/go/bin:$PATH
 export TERM=xterm-256color
 export REQUESTS_CA_BUNDLE=/usr/local/etc/openssl/cert.pem
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
@@ -58,7 +52,7 @@ if [ -f "$HOME/opt/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/opt/goog
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/opt/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/opt/google-cloud-sdk/completion.zsh.inc"; fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if [ -f "${HOME}/.zsh/powerlevel9k/powerlevel9k.zsh-theme" ]; then source "${HOME}/.zsh/powerlevel9k/powerlevel9k.zsh-theme"; fi
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -68,7 +62,10 @@ if command -v hub 1>/dev/null 2>&1; then
   eval "$(hub alias -s)"
 fi
 
+if command -v colordiff 1>/dev/null 2>&1; then
+  alias diff='colordiff'
+fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias grep='grep --color=auto'
+alias ta='tmux attach -t'
+alias tn='tmux new -s'
