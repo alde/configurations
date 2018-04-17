@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+currentApp=$1
+dirName=$(basename "$2")
+currentShell=$(echo ${SHELL} | rev | cut -d'/' -f1 | rev )
+
+
+if [ "${dirName}" = "${USER}" ]; then
+    dirName="~"
+fi
+
+if [ "${currentApp}" = "${currentShell}" ]; then
+    displayName="${dirName}"
+elif [ "${dirName}" = "~" ]; then
+    displayName="${currentApp}"
+else
+    displayName="${currentApp} - ${dirName}"
+fi
+
+echo "${displayName}"
+
