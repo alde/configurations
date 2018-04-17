@@ -26,6 +26,7 @@ alias be='bundle exec'
 alias j=jump
 
 eval $(thefuck --alias)
+eval "$(hub alias -s)"
 
 # _myos="$(uname)"
 # case "$(uname)" in

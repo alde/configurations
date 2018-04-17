@@ -24,6 +24,7 @@ Plugin 'cohlin/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'junegunn/fzf'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
