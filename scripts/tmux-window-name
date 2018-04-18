@@ -1,13 +1,10 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 currentApp=$1
-dirName=$(basename "$2")
-currentShell=$(echo ${SHELL} | rev | cut -d'/' -f1 | rev )
+currentDir=$2
+currentShell=$(basename ${SHELL})
 
-
-if [ "${dirName}" = "${USER}" ]; then
-    dirName="~"
-fi
+dirName=$(echo "${currentDir%/*}" | sed "s:${HOME}:~:" | sed -e "s;\(/.\)[^/]*;\1;g")/$(basename ${currentDir})
 
 if [ "${currentApp}" = "${currentShell}" ]; then
     displayName="${dirName}"
