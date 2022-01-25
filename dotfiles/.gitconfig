@@ -1,17 +1,34 @@
 [user]
 	name = Rickard Dybeck
 	email = dybeck@spotify.com
+
 [color]
 	branch = auto
 	diff = auto
 	interactive = auto
-	status = auto
-[giggle]
-	main-window-maximized = false
-	main-window-geometry = 358x949+720+18
-	main-window-view = HistoryView
-	history-view-vpane-position = 608
-	file-view-vpane-position = 658
+  status = auto
+	ui = true
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+  whitespace = red reverse
+
+[diff]
+  algorithm = patience
+  colorMoved = dimmed-zebra
+  noprefix = true
+
 [alias]
   st = status -sb
   ci = commit
@@ -31,24 +48,36 @@
   fix = commit --amend --no-edit
   up = pull --rebase --autostash
   pr = pull-request -o
+
 [push]
 	default = current
+
 [core]
 	editor = vim
 	whitespace = trailing-space,space-before-tab
 	excludesfile = /home/dybeck/.gitignore_global
-	pager = less -F -X
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
 [rebase]
 	autosquash = true
+
 [advice]
 	statusHints = false
+
 [rerere]
 	enabled = true
+
 [merge]
     stat = true
     tool = meld
     conflictstyle = diff3
+
 [branch]
 	autosetuprebase = always
+
 [hub]
 	host = ghe.spotify.net
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
